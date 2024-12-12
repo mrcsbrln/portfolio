@@ -1,7 +1,14 @@
-.hero{
+@import '../../styles.scss';
+
+:host{
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
+    background-color: $background-color;
+    color: $text-color-primary;
+    @include dFlex();
+}
+
+h1 {
+    font-size: 128px;
+    font-weight: 700;
+    text-align: center;
 }

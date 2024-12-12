@@ -1,0 +1,25 @@
+@import '../../../styles.scss';
+
+:host {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 32px;
+}
+
+a {
+    color: $text-color-primary;
+    text-decoration: none;
+}
+
+div {
+    @include dFlex($g: 16px);
+}
+
+img {
+    width: 250px;
+}
+
+nav{
+    @include dFlex($jc: space-between,$g: 16px);
+}
