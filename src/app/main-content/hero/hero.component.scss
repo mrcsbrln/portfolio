@@ -2,7 +2,7 @@
 
 :host{
     height: 100vh;
-    background: linear-gradient(45deg, $background-color 40%, $background-color-secondary 100%);
+    background: linear-gradient(45deg, $background-color-primary 40%, $background-color-secondary 100%);
     color: $text-color-primary;
     @include dFlex();
 }

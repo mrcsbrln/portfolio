@@ -11,8 +11,9 @@ a {
     color: $text-color-primary;
     text-decoration: none;
     font-family: 'Fira-Code';
+    font-size: 20px;
     &:active {
-        color: red;
+        color: $accent-color;
     }
 }
 

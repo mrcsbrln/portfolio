@@ -7,4 +7,28 @@ button {
     color: white;
     font-family: 'Karla';
     font-size: 18px;
+    overflow: hidden;
+    cursor: pointer;
+    span {
+        display: inline-block;
+    }
+    &:hover span {
+        animation: scroll-text 2s infinite linear;
+    }
 }
+
+@keyframes scroll-text {
+    0% {
+        transform: translateX(0%);
+    }
+    49.99% {
+        transform: translateX(-200%);
+    }
+    50% {
+        transform: translateX(200%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
