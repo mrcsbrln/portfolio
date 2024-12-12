@@ -2,7 +2,7 @@
 
 :host{
     height: 100vh;
-    background-color: $background-color;
+    background: linear-gradient(45deg, $background-color 40%, $background-color-secondary 100%);
     color: $text-color-primary;
     @include dFlex();
 }
@@ -11,4 +11,14 @@ h1 {
     font-size: 128px;
     font-weight: 700;
     text-align: center;
+}
+
+span {
+    font-family: 'Fira-Code';
+    font-size: 40px;
+    text-align: center;
+}
+
+.title {
+    @include dFlex($fd: column);
 }
