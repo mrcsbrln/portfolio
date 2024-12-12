@@ -11,6 +11,9 @@ a {
     color: $text-color-primary;
     text-decoration: none;
     font-family: 'Fira-Code';
+    &:active {
+        color: red;
+    }
 }
 
 div {
@@ -18,7 +21,7 @@ div {
 }
 
 img {
-    width: 200px;
+    width: 150px;
 }
 
 nav{

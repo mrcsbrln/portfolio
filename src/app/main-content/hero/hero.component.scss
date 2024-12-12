@@ -15,8 +15,13 @@ h1 {
 
 span {
     font-family: 'Fira-Code';
+    font-weight: 400;
     font-size: 40px;
     text-align: center;
+}
+
+.buttons-div {
+    @include dFlex($g: 16px);
 }
 
 .title {
