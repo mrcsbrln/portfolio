@@ -4,11 +4,11 @@
     height: 100vh;
     background: linear-gradient(45deg, $background-color-primary 40%, $background-color-secondary 100%);
     color: $text-color-primary;
-    @include dFlex();
+    @include dFlex($fd: column);
 }
 
 h1 {
-    font-size: 128px;
+    font-size: 96px;
     font-weight: 700;
     text-align: center;
 }
@@ -21,7 +21,8 @@ span {
 }
 
 .buttons-div {
-    @include dFlex($g: 16px);
+    margin-top: 32px;
+    @include dFlex($g: 32px);
 }
 
 .title {
