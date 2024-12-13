@@ -6,4 +6,27 @@
     <app-button label="Contact me" />
   </div>
 </div>
+<div class="left-seperator-div">
+  <div class="scroll-down"><span>&#8595;</span></div>
+  <div class="vertical-seperator"></div>
+</div>
+<div class="right-seperator-div">
+  <div class="email">{{ email }}</div>
+  <img
+    [src]="githubIcon"
+    (mouseover)="onMouseOver('github')"
+    (mouseleave)="onMouseLeave('github')"
+    alt="GitHub Icon"
+    class="icon"
+  />
+
+  <img
+    [src]="linkedInIcon"
+    (mouseover)="onMouseOver('linkedin')"
+    (mouseleave)="onMouseLeave('linkedin')"
+    alt="LinkedIn Icon"
+    class="icon"
+  />
+  <div class="vertical-seperator"></div>
+</div>
 <app-marquee />
