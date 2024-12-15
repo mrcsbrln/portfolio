@@ -2,7 +2,7 @@
 
 :host {
     @include dFlex($g: 64px);
-    height: 100vh;
+    min-height: 100vh;
     background-color: $background-color-primary;
     padding: 128px;
 }
@@ -12,21 +12,36 @@ h2 {
     color: $accent-color;
 }
 
-img {
-    width: 500px;
-    border-radius: 30px;
-    align-self: flex-start;
-}
-
 .about-me-wrapper {
     @include dFlex($ai: flex-start, $fd: column, $g: 16px);
     align-self: flex-end;
+    span {
+        color: $accent-color;
+        font-size: 24px;
+        font-weight: 500;
+    }
 }
 
 .about-me {
-    @include dFlex($fd: column, $ai: flex-start);
+    @include dFlex($fd: column, $ai: flex-start, $g: 16px);
     background-color: $background-color-card;
     padding: 32px;
     border-radius: 30px;
     border: 1px solid white;
+}
+
+.icon-list {
+    @include dFlex($g: 16px);
+    p {
+        color: $accent-color;
+        &:hover {
+            color: white;
+        }
+    }
+}
+
+.portrait {
+    width: 500px;
+    border-radius: 30px;
+    align-self: flex-start;
 }

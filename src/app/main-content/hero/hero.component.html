@@ -12,21 +12,31 @@
 </div>
 <div class="right-seperator-div">
   <div class="email">{{ email }}</div>
-  <img
-    [src]="githubIcon"
-    (mouseover)="onMouseOver('github')"
-    (mouseleave)="onMouseLeave('github')"
-    alt="GitHub Icon"
-    class="icon"
-  />
+  <a
+    href="https://github.com/mrcsbrln"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <img
+      [src]="githubIcon"
+      (mouseover)="onMouseOver('github')"
+      (mouseleave)="onMouseLeave('github')"
+      alt="GitHub Icon"
+    />
+  </a>
+  <a
+    href="https://www.linkedin.com/in/marcus-hartmann-berlin/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <img
+      [src]="linkedInIcon"
+      (mouseover)="onMouseOver('linkedin')"
+      (mouseleave)="onMouseLeave('linkedin')"
+      alt="LinkedIn Icon"
+    />
+  </a>
 
-  <img
-    [src]="linkedInIcon"
-    (mouseover)="onMouseOver('linkedin')"
-    (mouseleave)="onMouseLeave('linkedin')"
-    alt="LinkedIn Icon"
-    class="icon"
-  />
   <div class="vertical-seperator"></div>
 </div>
 <app-marquee />

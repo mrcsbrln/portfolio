@@ -1,0 +1,49 @@
+@import '../../../styles.scss';
+
+:host {
+    min-height: 100vh;
+    background: radial-gradient(circle at 0% 50%, $background-color-secondary -20%, $background-color-primary 20%);
+    @include dFlex($g: 64px);
+    padding: 128px;
+}
+
+h2 {
+    font-size: 64px;
+    color: $accent-color;
+}
+
+.skills-wrapper {
+    @include dFlex($fd: column, $ai:flex-start, $g: 16px);
+    span {
+        color: $accent-color;
+        font-size: 24px;
+        font-weight: 500;
+    }
+}
+
+.skills-inner-wrapper {
+    @include dFlex($ai: flex-start, $g: 64px);
+}
+
+.skill-set-text {
+    @include dFlex($fd: column);
+    background-color: $background-color-card;
+    padding: 32px;
+    flex: 1;
+    border-radius: 30px;
+    border: 1px solid white;
+}
+
+.tech-icons {
+    @include dFlex($jc: flex-start, $g: 64px);
+    flex-wrap: wrap;
+    flex: 2;
+}
+
+.tech-icon {
+    @include dFlex($fd: column, $g: 8px);
+    width: 128px;
+    img {
+        height: 56px;
+    }
+}

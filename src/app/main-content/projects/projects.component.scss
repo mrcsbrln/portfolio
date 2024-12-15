@@ -1,0 +1,7 @@
+@import '../../../styles.scss';
+
+:host {
+    background-color: $background-color-primary;
+    height: 100vh;
+    @include dFlex();
+}
