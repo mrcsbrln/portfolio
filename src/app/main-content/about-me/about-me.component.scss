@@ -24,7 +24,7 @@ h2 {
 
 .about-me {
     @include dFlex($fd: column, $ai: flex-start, $g: 16px);
-    background-color: $background-color-card;
+    background-color: $background-color-secondary;
     padding: 32px;
     border-radius: 30px;
     border: 1px solid white;

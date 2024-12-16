@@ -12,9 +12,16 @@ h2 {
     color: $accent-color;
 }
 
+h3 {
+    font-size: 24px;
+    span{
+        color: $accent-color;
+    }
+}
+
 .skills-wrapper {
     @include dFlex($fd: column, $ai:flex-start, $g: 16px);
-    span {
+    span:first-of-type {
         color: $accent-color;
         font-size: 24px;
         font-weight: 500;
@@ -26,8 +33,8 @@ h2 {
 }
 
 .skill-set-text {
-    @include dFlex($fd: column);
-    background-color: $background-color-card;
+    @include dFlex($fd: column, $ai: flex-start, $g: 16px);
+    background-color: $background-color-secondary;
     padding: 32px;
     flex: 1;
     border-radius: 30px;
@@ -43,7 +50,12 @@ h2 {
 .tech-icon {
     @include dFlex($fd: column, $g: 8px);
     width: 128px;
+    font-family: 'fira-Code';
     img {
         height: 56px;
+        transition: transform 500ms ease;
+        &:hover {
+            transform: scale(1.1);
+        }
     }
 }

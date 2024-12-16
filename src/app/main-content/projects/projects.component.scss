@@ -3,5 +3,50 @@
 :host {
     background-color: $background-color-primary;
     height: 100vh;
-    @include dFlex();
+    @include dFlex($fd: column, $ai: flex-start, $jc: flex-start, $g: 32px);
+    padding: 128px;
+}
+
+h2 {
+    font-size: 64px;
+    font-family: 'Fira-Code';
+    color: $accent-color;
+}
+
+span {
+    font-size: 24px;
+    color: $accent-color;
+}
+
+ul {
+    width: 100%;
+}
+
+li {
+    list-style: none;
+    @include dFlex($jc: space-between);
+    width: 60%;
+    border-top: 1px solid $accent-color;
+    padding: 40px 32px;
+    &:hover {
+        background-color: $background-color-secondary;
+        .left img {
+            display: inline;
+        }
+    }
+    .left {
+        font-family: 'Fira-Code';
+        font-size: 24px;
+        font-weight: 700;
+        img {
+            display: none;
+        }
+    }
+    .right {
+        font-size: 18px;
+    }
+}
+
+.border-bottom {
+    border-bottom: 1px solid $accent-color;
 }
