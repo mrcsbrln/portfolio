@@ -26,8 +26,8 @@ li {
     list-style: none;
     @include dFlex($jc: flex-start, $g: 32px);
     align-items: stretch;
+    height: 109px;
     &:hover {
-        background-color: $background-color-secondary;
         img, .left img {
             display: inline;
         }
@@ -39,6 +39,9 @@ li {
     padding: 40px 32px;
     @include dFlex($jc: space-between);
     flex: 2;
+    &:hover{
+        background-color: $background-color-secondary;
+    }
     .left {
         font-family: 'Fira-Code';
         font-size: 24px;
