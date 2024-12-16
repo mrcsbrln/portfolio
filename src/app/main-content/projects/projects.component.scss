@@ -60,11 +60,26 @@ li {
     flex: 1;
 }
 
+.img-div {
+    @include dFlex();
+    background-image: repeating-linear-gradient(
+        -45deg, /* Winkel der Linien */
+        $accent-color, /* Farbe der Linien */
+        $accent-color 1px, /* Linienbreite */
+        $background-color-primary 1px, /* Anfang des Abstands */
+        $background-color-primary 8px /* Abstand zwischen Linien */
+      );
+      border-radius: 16px; 
+}
+
 .border-bottom {
     border-bottom: 1px solid $accent-color;
 }
 
 .screenshot {
+    position: relative;
+    right: 16px;
+    bottom: 16px;
     width: 250px;
     display: none;
 }
