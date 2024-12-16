@@ -2,7 +2,7 @@
 
 :host {
     background-color: $background-color-primary;
-    height: 100vh;
+    min-height: 100vh;
     @include dFlex($fd: column, $ai: flex-start, $jc: flex-start, $g: 32px);
     padding: 128px;
 }
@@ -24,16 +24,21 @@ ul {
 
 li {
     list-style: none;
-    @include dFlex($jc: space-between);
-    width: 60%;
-    border-top: 1px solid $accent-color;
-    padding: 40px 32px;
+    @include dFlex($jc: flex-start, $g: 32px);
+    align-items: stretch;
     &:hover {
         background-color: $background-color-secondary;
-        .left img {
+        img, .left img {
             display: inline;
         }
     }
+}
+
+.left-wrapper {
+    border-top: 1px solid $accent-color;
+    padding: 40px 32px;
+    @include dFlex($jc: space-between);
+    flex: 2;
     .left {
         font-family: 'Fira-Code';
         font-size: 24px;
@@ -47,6 +52,16 @@ li {
     }
 }
 
+.right-wrapper {
+    @include dFlex();
+    flex: 1;
+}
+
 .border-bottom {
     border-bottom: 1px solid $accent-color;
+}
+
+.screenshot {
+    width: 250px;
+    display: none;
 }
