@@ -1,7 +1,7 @@
 @import '../../../styles.scss';
 
 :host {
-    @include dFlex($g: 64px);
+    @include dFlex($g: 128px);
     min-height: 100vh;
     background-color: $background-color-primary;
     padding: 128px;
@@ -14,6 +14,7 @@ h2 {
 
 .about-me-wrapper {
     @include dFlex($ai: flex-start, $fd: column, $g: 16px);
+    flex: 1;
     align-self: flex-end;
     span {
         color: $accent-color;
@@ -40,8 +41,24 @@ h2 {
     }
 }
 
+.portrait-div {
+    @include dFlex();
+    flex: 1;
+    background-image: repeating-linear-gradient(
+        45deg,
+        $accent-color,
+        $accent-color 1px,
+        $background-color-primary 1px,
+        $background-color-primary 16px
+      );
+      border-radius: 30px;     
+}
+
 .portrait {
-    width: 500px;
+    position: relative;
+    left: 32px;
+    bottom: 16px;
+    width: 100%;
     border-radius: 30px;
     align-self: flex-start;
 }

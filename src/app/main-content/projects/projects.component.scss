@@ -27,6 +27,7 @@ li {
     @include dFlex($jc: flex-start, $g: 32px);
     align-items: stretch;
     height: 109px;
+    cursor: pointer;
     &:hover {
         img, .left img {
             display: inline;
@@ -80,6 +81,6 @@ li {
     position: relative;
     right: 16px;
     bottom: 16px;
-    width: 250px;
+    width: 200px;
     display: none;
 }
