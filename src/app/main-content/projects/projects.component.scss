@@ -63,11 +63,11 @@ li {
 .img-div {
     @include dFlex();
     background-image: repeating-linear-gradient(
-        -45deg, /* Winkel der Linien */
-        $accent-color, /* Farbe der Linien */
-        $accent-color 1px, /* Linienbreite */
-        $background-color-primary 1px, /* Anfang des Abstands */
-        $background-color-primary 8px /* Abstand zwischen Linien */
+        -45deg,
+        $accent-color,
+        $accent-color 1px,
+        $background-color-primary 1px,
+        $background-color-primary 8px
       );
       border-radius: 16px; 
 }
