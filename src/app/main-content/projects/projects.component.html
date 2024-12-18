@@ -11,7 +11,7 @@
       <div class="left-wrapper">
         <div class="left">
           {{ project.title }}
-          <div class="arrow"><img src="/img/arrow-up.svg" alt="" /></div>
+          <div class="arrow" (click)="openOverlay()"><img src="/img/arrow-up.svg" alt="" /></div>
         </div>
         <div class="right">{{ project.stack }}</div>
       </div>
@@ -22,8 +22,8 @@
       </div>
     </li>
   }
-  @empty {
-    <li>Keine Projekte verfügbar.</li>
-  }
 </ul>
-<app-overlay/>
+@if(overlayVisible()){
+  <app-overlay (close)="closeOverlay()"/>
+}
+

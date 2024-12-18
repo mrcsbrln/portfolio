@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Project } from '../../interfaces/project.interface';
 
 @Component({
   selector: 'app-overlay',
@@ -8,5 +9,10 @@ import { Component, Input } from '@angular/core';
   styleUrl: './overlay.component.scss'
 })
 export class OverlayComponent {
-  @Input() projects: any;
+  @Input() projects!: Project[];
+  @Output() close = new EventEmitter<void>();
+
+  closeOverlay() {
+    this.close.emit();
+  }
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { Project } from '../../interfaces/project.interface';
 import { OverlayComponent } from "../overlay/overlay.component";
 
@@ -30,4 +30,13 @@ export class ProjectsComponent {
       imageUrl: '/img/da-bubble.png',
     }
   ];
+  overlayVisible = signal(false);
+
+  openOverlay() {
+    this.overlayVisible.set(true);
+  }
+
+  closeOverlay() {
+    this.overlayVisible.set(false);
+  }
 }
