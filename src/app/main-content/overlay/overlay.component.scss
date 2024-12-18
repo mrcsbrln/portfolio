@@ -3,7 +3,7 @@
 @import '../../../styles.scss';
 
 :host {
-    display: none;
+    // display: none;
     position: fixed; /* Stellt sicher, dass das Overlay beim Scrollen in der Mitte bleibt */
     top: 50%; /* Position von oben */
     left: 50%; /* Position von links */

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Project } from '../../interfaces/project.interface';
 import { OverlayComponent } from "../overlay/overlay.component";
 
 @Component({
@@ -9,7 +10,7 @@ import { OverlayComponent } from "../overlay/overlay.component";
   styleUrl: './projects.component.scss'
 })
 export class ProjectsComponent {
-  projects = [
+  projects: Project[] = [
     {
       id: 1,
       title: 'Join',
