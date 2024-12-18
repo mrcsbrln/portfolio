@@ -6,13 +6,13 @@ import { Project } from '../../interfaces/project.interface';
   standalone: true,
   imports: [],
   templateUrl: './overlay.component.html',
-  styleUrl: './overlay.component.scss'
+  styleUrl: './overlay.component.scss',
 })
 export class OverlayComponent {
-  @Input() projects!: Project[];
+  @Input() project: Project | null = null;
   @Output() close = new EventEmitter<void>();
 
-  closeOverlay() {
+  emitCloseEvent() {
     this.close.emit();
   }
 }

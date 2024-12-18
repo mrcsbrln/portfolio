@@ -1,2 +1,10 @@
-<div class="cancel" (click)="closeOverlay()"><img src="/img/cancel.svg" alt="" /></div>
-<p>overlay works!</p>
+<div class="cancel" (click)="emitCloseEvent()">
+  <img src="/img/cancel.svg" alt="" />
+</div>
+<div class="main-div">
+    <div>
+        <span>{{ project?.id }}</span>
+        <h2>{{ project?.title }}</h2>
+        <p>{{ project?.description }}</p>
+    </div>
+</div>

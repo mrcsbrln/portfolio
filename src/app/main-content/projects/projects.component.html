@@ -7,23 +7,28 @@
 </p>
 <ul>
   @for (project of projects; track project.id) {
-    <li>
-      <div class="left-wrapper">
-        <div class="left">
-          {{ project.title }}
-          <div class="arrow" (click)="openOverlay()"><img src="/img/arrow-up.svg" alt="" /></div>
-        </div>
-        <div class="right">{{ project.stack }}</div>
-      </div>
-      <div class="right-wrapper">
-        <div class="img-div">
-          <img class="screenshot" [src]="project.imageUrl" [alt]="project.title" />
+  <li>
+    <div class="left-wrapper">
+      <div class="left">
+        {{ project.title }}
+        <div class="arrow" (click)="openOverlay(project)">
+          <img src="/img/arrow-up.svg" alt="" />
         </div>
       </div>
-    </li>
+      <div class="right">{{ project.stack }}</div>
+    </div>
+    <div class="right-wrapper">
+      <div class="img-div">
+        <img
+          class="screenshot"
+          [src]="project.imageUrl"
+          [alt]="project.title"
+        />
+      </div>
+    </div>
+  </li>
   }
 </ul>
 @if(overlayVisible()){
-  <app-overlay (close)="closeOverlay()"/>
+<app-overlay [project]="selectedProject()" (close)="closeOverlay()" />
 }
-

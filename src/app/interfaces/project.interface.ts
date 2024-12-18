@@ -3,4 +3,5 @@ export interface Project {
     title: string;
     imageUrl: string;
     stack: string;
+    description: string;
   }

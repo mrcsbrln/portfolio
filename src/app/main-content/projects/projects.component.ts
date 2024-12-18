@@ -1,42 +1,29 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { Project } from '../../interfaces/project.interface';
-import { OverlayComponent } from "../overlay/overlay.component";
+import { OverlayComponent } from '../overlay/overlay.component';
+import { ProjectsService } from './projects.service';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
   imports: [OverlayComponent],
   templateUrl: './projects.component.html',
-  styleUrl: './projects.component.scss'
+  styleUrl: './projects.component.scss',
 })
 export class ProjectsComponent {
-  projects: Project[] = [
-    {
-      id: 1,
-      title: 'Join',
-      stack: 'Angular | Typescript | HTML | CSS | Firebase',
-      imageUrl: '/img/join.png',
-    },
-    {
-      id: 2,
-      title: 'El Pollo Loco',
-      stack: 'HTML | CSS | JavaScript',
-      imageUrl: '/img/el-pollo-loco.png',
-    },
-    {
-      id: 3,
-      title: 'DA Bubble',
-      stack: 'Angular | Typescript | Firebase',
-      imageUrl: '/img/da-bubble.png',
-    }
-  ];
-  overlayVisible = signal(false);
+  private projectsService = inject(ProjectsService);
+  projects = this.projectsService.getProjects();
 
-  openOverlay() {
+  overlayVisible = signal(false);
+  selectedProject = signal<Project | null>(null);
+
+  openOverlay(project: Project) {
+    this.selectedProject.set(project);
     this.overlayVisible.set(true);
   }
 
   closeOverlay() {
     this.overlayVisible.set(false);
+    this.selectedProject.set(null);
   }
 }
