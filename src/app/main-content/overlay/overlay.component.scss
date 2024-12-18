@@ -1,0 +1,26 @@
+@import '../../../styles.scss';
+
+@import '../../../styles.scss';
+
+:host {
+    display: none;
+    position: fixed; /* Stellt sicher, dass das Overlay beim Scrollen in der Mitte bleibt */
+    top: 50%; /* Position von oben */
+    left: 50%; /* Position von links */
+    transform: translate(-50%, -50%); /* Zentriert das Overlay exakt */
+    border-radius: 32px;
+    border: 1px solid $accent-color;
+    background: linear-gradient(45deg, $background-color-primary 40%, $background-color-secondary 100%);
+    padding: 64px;
+    z-index: 1000; /* Sicherstellen, dass das Overlay über anderen Elementen liegt */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Optional: Schatten für visuelle Tiefe */
+    max-width: 90%; /* Optionale Begrenzung der Breite */
+    max-height: 90%; /* Optionale Begrenzung der Höhe */
+    overflow: auto; /* Scrollbars anzeigen, wenn der Inhalt zu groß ist */
+}
+
+.cancel {
+    @include dFlex($jc: flex-end);
+    width: 100%;
+    cursor: pointer;
+}

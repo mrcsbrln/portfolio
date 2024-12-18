@@ -6,39 +6,24 @@
   erat,
 </p>
 <ul>
-  <li>
-    <div class="left-wrapper">
-      <div class="left">Join <img src="/img/arrow-up.svg" alt="" /></div>
-      <div class="right">Angular | Typescript | HTML | CSS | Firebase</div>
-    </div>
-    <div class="right-wrapper">
-      <div class="img-div">
-        <img class="screenshot" src="/img/join.png" alt="" />
+  @for (project of projects; track project.id) {
+    <li>
+      <div class="left-wrapper">
+        <div class="left">
+          {{ project.title }}
+          <div class="arrow"><img src="/img/arrow-up.svg" alt="" /></div>
+        </div>
+        <div class="right">{{ project.stack }}</div>
       </div>
-    </div>
-  </li>
-  <li>
-    <div class="left-wrapper">
-      <div class="left">
-        El Pollo Loco <img src="/img/arrow-up.svg" alt="" />
+      <div class="right-wrapper">
+        <div class="img-div">
+          <img class="screenshot" [src]="project.imageUrl" [alt]="project.title" />
+        </div>
       </div>
-      <div class="right">HTML | CSS | JavaScript</div>
-    </div>
-    <div class="right-wrapper">
-      <div class="img-div">
-        <img class="screenshot" src="/img/el-pollo-loco.png" alt="" />
-      </div>
-    </div>
-  </li>
-  <li>
-    <div class="left-wrapper border-bottom">
-      <div class="left">Join <img src="/img/arrow-up.svg" alt="" /></div>
-      <div class="right">Angular | Typescript | HTML | CSS | Firebase</div>
-    </div>
-    <div class="right-wrapper">
-      <div class="img-div">
-        <img class="screenshot" src="/img/join.png" alt="" />
-      </div>
-    </div>
-  </li>
+    </li>
+  }
+  @empty {
+    <li>Keine Projekte verfügbar.</li>
+  }
 </ul>
+<app-overlay/>

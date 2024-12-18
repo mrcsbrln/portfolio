@@ -35,6 +35,26 @@ li {
     }
 }
 
+.arrow {
+    display: inline;
+}
+
+.border-bottom {
+    border-bottom: 1px solid $accent-color;
+}
+
+.img-div {
+    @include dFlex();
+    background-image: repeating-linear-gradient(
+        -45deg,
+        $accent-color,
+        $accent-color 1px,
+        $background-color-primary 1px,
+        $background-color-primary 8px
+      );
+      border-radius: 16px; 
+}
+
 .left-wrapper {
     border-top: 1px solid $accent-color;
     padding: 40px 32px;
@@ -59,22 +79,6 @@ li {
 .right-wrapper {
     @include dFlex();
     flex: 1;
-}
-
-.img-div {
-    @include dFlex();
-    background-image: repeating-linear-gradient(
-        -45deg,
-        $accent-color,
-        $accent-color 1px,
-        $background-color-primary 1px,
-        $background-color-primary 8px
-      );
-      border-radius: 16px; 
-}
-
-.border-bottom {
-    border-bottom: 1px solid $accent-color;
 }
 
 .screenshot {
