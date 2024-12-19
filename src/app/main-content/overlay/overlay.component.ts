@@ -16,4 +16,16 @@ export class OverlayComponent {
   emitCloseEvent() {
     this.close.emit();
   }
+
+  getStackIconPath(): string[] {
+    if (!this.project || !this.project.stack) {
+      return [];
+    }
+  
+    return this.project.stack.map((tech) => `/img/${tech.toLowerCase()}-green.svg`);
+  }
+
+  getStackName(i: number) {
+    return this.project?.stack[i];
+  }
 }

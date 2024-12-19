@@ -74,14 +74,14 @@ h2 {
 }
 
 .project-info {
-    @include dFlex($fd: column, $ai: flex-start, $g: 16px);
+    @include dFlex($fd: column, $ai: flex-start, $g: 32px);
     flex: 1;
-    span:first-of-type {
+    > span:first-of-type {
         font-size: 128px;
         font-weight: 700;
         color: $accent-color;
     }
-    span:nth-of-type(2) {
+    > span:nth-of-type(2) {
         color: $accent-color;
         font-family: 'Fira-Code';
         font-size: 24px;
@@ -94,5 +94,19 @@ h2 {
     flex: 1;
     img {
         width: 100%;
+    }
+}
+
+.stack-icons {
+    @include dFlex($g: 32px);
+}
+
+.stack-icon {
+    @include dFlex($g:8px);
+    span {
+        font-size: 16px;
+    }
+    img {
+        height: 24px;
     }
 }
