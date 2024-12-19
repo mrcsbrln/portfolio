@@ -1,17 +1,30 @@
 <div class="overlay">
-    <div class="cancel" (click)="emitCloseEvent()">
-        <img src="/img/cancel.svg" alt="" />
+  <div class="cancel" (click)="emitCloseEvent()">
+    <img src="/img/cancel.svg" alt="" />
+  </div>
+  <div class="main-div">
+    <div class="project-info">
+      <span>{{ project?.id }}</span>
+      <h2>{{ project?.title }}</h2>
+      <span>What is this project about?</span>
+      <p>{{ project?.description }}</p>
+      <div class="button-div">
+        <a
+          href="{{ project?.gitHubUrl }}"
+          target="_blank"
+          rel="noopener noreferrer"
+          >GitHub <img src="/img/arrow-up-green.svg" alt=""
+        /></a>
+        <a
+          href="{{ project?.projectUrl }}"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Live Test <img src="/img/arrow-up-green.svg" alt=""
+        /></a>
       </div>
-      <div class="main-div">
-          <div class="project-info">
-              <span>{{ project?.id }}</span>
-              <h2>{{ project?.title }}</h2>
-              <span>What is this project about?</span>
-              <p>{{ project?.description }}</p>
-          </div>
-          <div class="project-img">
-              <img src="{{ project?.imageUrl }}" alt="">
-          </div>
-      </div> 
+    </div>
+    <div class="project-img">
+      <img src="{{ project?.imageUrl }}" alt="" />
+    </div>
+  </div>
 </div>
-
