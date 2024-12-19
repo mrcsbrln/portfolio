@@ -6,16 +6,16 @@
   erat,
 </p>
 <ul>
-  @for (project of projects; track project.id) {
+  @for (project of projects; track project.id; let isLast = $last) {
   <li>
-    <div class="left-wrapper">
+    <div class="left-wrapper" [ngClass]="{'border-bottom': isLast}">
       <div class="left">
         {{ project.title }}
         <div class="arrow" (click)="openOverlay(project)">
           <img src="/img/arrow-up.svg" alt="" />
         </div>
       </div>
-      <div class="right">{{ project.stack }}</div>
+      <div class="right">{{ project.stack.join(" | ") }}</div>
     </div>
     <div class="right-wrapper">
       <div class="img-div">

@@ -2,11 +2,12 @@ import { Component, inject, signal } from '@angular/core';
 import { Project } from '../../interfaces/project.interface';
 import { OverlayComponent } from '../overlay/overlay.component';
 import { ProjectsService } from './projects.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [OverlayComponent],
+  imports: [CommonModule, OverlayComponent],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss',
 })
