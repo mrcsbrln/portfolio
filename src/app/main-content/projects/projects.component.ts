@@ -20,10 +20,12 @@ export class ProjectsComponent {
   openOverlay(project: Project) {
     this.selectedProject.set(project);
     this.overlayVisible.set(true);
+    document.body.classList.add('no-scroll');
   }
 
   closeOverlay() {
     this.overlayVisible.set(false);
     this.selectedProject.set(null);
+    document.body.classList.remove('no-scroll');
   }
 }
