@@ -4,16 +4,16 @@
   </div>
   <div class="main-div">
     <div class="project-info">
-      <span>{{ project?.id }}</span>
+      <span>{{ getFormattedId(project?.id || 0) }}</span>
       <h2>{{ project?.title }}</h2>
       <span>What is this project about?</span>
       <p>{{ project?.description }}</p>
       <div class="stack-icons">
         @for(stackIconPath of getStackIconPath(); track $index) {
-            <div class="stack-icon">
-                <img [src]="stackIconPath">
-                <span>{{ getStackName($index) }}</span>
-            </div>
+        <div class="stack-icon">
+          <img [src]="stackIconPath" />
+          <span>{{ getStackName($index) }}</span>
+        </div>
         }
       </div>
       <div class="button-div">
@@ -35,4 +35,5 @@
       <img src="{{ project?.imageUrl }}" alt="" />
     </div>
   </div>
+  <button (click)="nextProject()">Next project <img src="/img/arrow-right.svg" alt=""></button>
 </div>

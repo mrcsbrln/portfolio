@@ -11,7 +11,23 @@ import { ButtonComponent } from '../../shared/button/button.component';
 })
 export class OverlayComponent {
   @Input() project: Project | null = null;
+  @Input() projects: Project[] = [];
   @Output() close = new EventEmitter<void>();
+
+  private currentIndex: number = 0;
+
+  ngOnChanges(): void {
+    if (this.project) {
+      this.currentIndex = this.projects.findIndex((p) => p.id === this.project?.id);
+    }
+  }
+
+  nextProject(): void {
+    if (this.projects.length > 0) {
+      this.currentIndex = (this.currentIndex + 1) % this.projects.length;
+      this.project = this.projects[this.currentIndex];
+    }
+  }
 
   emitCloseEvent() {
     this.close.emit();
@@ -27,5 +43,9 @@ export class OverlayComponent {
 
   getStackName(i: number) {
     return this.project?.stack[i];
+  }
+
+  getFormattedId(id: number | undefined): string {
+    return id !== undefined ? id.toString().padStart(2, '0') : '00';
   }
 }

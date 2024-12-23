@@ -11,31 +11,6 @@
     transform: translate(-50%, -50%);
 }
 
-a {
-    @include dFlex($g: 8px);
-    text-decoration: none;
-    border: 1px solid white;
-    border-radius: 100px;
-    padding: 0 24px;
-    height: 48px;
-    background: transparent;
-    color: white;
-    font-family: "Karla";
-    font-size: 18px;
-    transition: all 0.6s ease;
-    img {
-        transition: transform 0.6s ease;
-        transform: translate(0);
-    }
-    &:hover {
-        border-color: $accent-color;
-        color: $accent-color;
-        img {
-            transform: translate(6px, -3px);
-        }
-    }
-}
-
 h2 {
     font-family: 'Fira-Code';
     font-size: 64px;
@@ -44,6 +19,30 @@ h2 {
 
 .button-div {
     @include dFlex($jc: flex-start, $g: 32px);
+    a {
+        @include dFlex($g: 8px);
+        text-decoration: none;
+        border: 1px solid white;
+        border-radius: 100px;
+        padding: 0 24px;
+        height: 48px;
+        background: transparent;
+        color: white;
+        font-family: "Karla";
+        font-size: 18px;
+        transition: all 0.6s ease;
+        img {
+            transition: transform 0.6s ease;
+            transform: translate(0);
+        }
+        &:hover {
+            border-color: $accent-color;
+            color: $accent-color;
+            img {
+                transform: translate(6px, -3px);
+            }
+        }
+    }
 }
 
 .cancel {
@@ -71,6 +70,17 @@ h2 {
     @include dFlex($fd: column, $g: 16px);
     width: 80%;
     height: 80%;
+    button {
+        background: none;
+        border: none;
+        color: $accent-color;
+        cursor: pointer;
+        align-self: flex-end;
+        @include dFlex($g: 8px);
+        &:hover {
+            color: white;
+        }
+    }
 }
 
 .project-info {

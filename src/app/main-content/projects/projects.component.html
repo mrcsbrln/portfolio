@@ -8,10 +8,14 @@
 <ul>
   @for (project of projects; track project.id; let isLast = $last) {
   <li>
-    <div class="left-wrapper" [ngClass]="{'border-bottom': isLast}">
+    <div
+      class="left-wrapper"
+      (click)="openOverlay(project)"
+      [ngClass]="{ 'border-bottom': isLast }"
+    >
       <div class="left">
         {{ project.title }}
-        <div class="arrow" (click)="openOverlay(project)">
+        <div class="arrow">
           <img src="/img/arrow-up.svg" alt="" />
         </div>
       </div>
@@ -30,5 +34,5 @@
   }
 </ul>
 @if(overlayVisible()){
-<app-overlay [project]="selectedProject()" (close)="closeOverlay()" />
+<app-overlay [project]="selectedProject()" [projects]="projects" (close)="closeOverlay()" />
 }
