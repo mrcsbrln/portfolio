@@ -1,6 +1,10 @@
 <div class="overlay">
   <div class="cancel" (click)="emitCloseEvent()">
-    <img src="/img/cancel.svg" alt="" />
+    <img
+      [src]="cancelIconPath"
+      (mouseover)="onMouseOver('cancel-icon')"
+      (mouseleave)="onMouseLeave('cancel-icon')"
+    />
   </div>
   <div class="main-div">
     <div class="project-info">
@@ -35,5 +39,11 @@
       <img src="{{ project?.imageUrl }}" alt="" />
     </div>
   </div>
-  <button (click)="nextProject()">Next project <img src="/img/arrow-right.svg" alt=""></button>
+  <button
+    (click)="nextProject()"
+    (mouseover)="onMouseOver('arrow-right')"
+    (mouseleave)="onMouseLeave('arrow-right')"
+  >
+    Next project <img src="/img/arrow-right.svg" [src]="arrowRightIconPath" />
+  </button>
 </div>
