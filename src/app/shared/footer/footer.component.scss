@@ -4,6 +4,7 @@
   @include dFlex($jc: space-between);
   background-color: $background-color-primary;
   padding: 32px;
+  width: 100%;
 }
 
 .left-div {

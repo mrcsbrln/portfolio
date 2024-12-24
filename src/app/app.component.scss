@@ -1,0 +1,6 @@
+@import '../styles.scss';
+
+:host {
+    @include dFlex($fd: column);
+    min-height: 100vh;
+}
