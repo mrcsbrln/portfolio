@@ -8,15 +8,21 @@ form {
     @include dFlex($fd: column, $ai: flex-start);
 }
 
+.border-bottom {
+    border-bottom: 1px solid white;
+}
+
 .checkbox {
     @include dFlex($jc:flex-start, $g: 16px);
     width: 100%;
+    margin-top: 32px;
     input[type = "checkbox"] {
         background-color: transparent;
         border: 1px solid $accent-color;
         appearance: none;
         width: 18px;
         height: 18px;
+        aspect-ratio: 1;
         border: 3px solid $accent-color;
         border-radius: 2px;
         cursor: pointer;
@@ -71,16 +77,14 @@ form {
     }
 }
 
-.form-row:last-of-type {
-    border-bottom: 1px solid white;
-}
-
 .submit-btn {
+    width: 50%;
     margin-top: 32px;
     border: 1px solid $accent-color;
     border-radius: 100px;
     padding: 16px;
     background: none;
     color: white;
+    align-self: center;
     cursor: pointer;
 }
