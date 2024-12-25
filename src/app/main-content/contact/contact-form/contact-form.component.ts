@@ -15,6 +15,7 @@ export class ContactFormComponent {
     name: '',
     email: '',
     message: '',
+    privacyPolicyChecked: false,
   }
 
   onSubmit() {
