@@ -1,53 +1,70 @@
-<div class="container">
-  <form (ngSubmit)="onSubmit()">
-    <div class="form-row">
-      <label for="fname">Name</label>
-      <input
-        [(ngModel)]="contactData.name"
-        type="text"
-        id="name"
-        name="name"
-        placeholder="Your name.."
-      />
-    </div>
+<form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+  <div class="form-row">
+    <label for="fname">What´s your name?</label>
+    <input
+      #name="ngModel"
+      [(ngModel)]="contactData.name"
+      type="text"
+      id="name"
+      name="name"
+      [placeholder]="
+        !name.valid && name.touched
+          ? 'Oops! it seems your name is missing'
+          : 'Your name goes here'
+      "
+      required
+    />
+  </div>
 
-    <div class="form-row">
-      <label for="email">Email</label>
-      <input
-        [(ngModel)]="contactData.email"
-        type="email"
-        id="email"
-        name="email"
-        placeholder="Your Email.."
-      />
-    </div>
+  <div class="form-row">
+    <label for="email">What´s your email?</label>
+    <input
+      #email="ngModel"
+      [(ngModel)]="contactData.email"
+      type="email"
+      id="email"
+      name="email"
+      [placeholder]="
+        !email.valid && email.touched
+          ? 'Hoppla! your email is required'
+          : 'your-email@email.com'
+      "
+      required
+      pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+    />
+  </div>
 
-    <div class="form-row border-bottom">
-      <label for="message">Message</label>
-      <textarea
-        rows="1"
-        [(ngModel)]="contactData.message"
-        id="subject"
-        name="subject"
-        placeholder="Write something.."
-      ></textarea>
-    </div>
+  <div class="form-row border-bottom">
+    <label for="message">How can I help you?</label>
+    <textarea
+      #message="ngModel"
+      rows="1"
+      [(ngModel)]="contactData.message"
+      id="subject"
+      name="subject"
+      [placeholder]="
+        !message.valid && message.touched
+          ? 'What do you need to develop?'
+          : 'Please enter a message'
+      "
+      required
+    ></textarea>
+  </div>
 
-    <div class="checkbox">
-      <input
-        type="checkbox"
-        id="privacyPolicy"
-        name="privacyPolicy"
-        [(ngModel)]="contactData.privacyPolicyChecked"
-        required
-      />
-      <label for="privacyPolicy">
-        I've read the 
-        <a href="/imprint" target="_blank">privacy Policy</a>
-        and agree to the processing of my data as outlined.
-      </label>
-    </div>
+  <div class="checkbox">
+    <input
+      type="checkbox"
+      id="privacyPolicy"
+      name="privacyPolicy"
+      [(ngModel)]="contactData.privacyPolicyChecked"
+      required
+    />
+    <label for="privacyPolicy">
+      I've read the
+      <a href="/imprint" target="_blank">privacy Policy</a>
+      and agree to the processing of my data as outlined.
+    </label>
+  </div>
 
-    <input class="submit-btn" type="submit" value="Say hello :)" />
-  </form>
-</div>
+  <input class="submit-btn" type="submit" value="Say hello :)" />
+</form>
