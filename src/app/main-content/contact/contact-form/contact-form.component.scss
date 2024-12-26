@@ -57,6 +57,10 @@ form {
   width: 100%;
   padding: 24px 16px;
   border-top: 1px solid white;
+  &:hover input::placeholder,
+  &:hover textarea::placeholder {
+    color: #fff;
+  }
   input,
   textarea {
     width: 100%;
@@ -76,10 +80,6 @@ form {
     &:invalid.ng-touched::placeholder {
       color: $error-text;
     }
-  }
-  input:hover::placeholder,
-  textarea:hover::placeholder {
-    color: #fff;
   }
   label {
     font-family: "Fira-Code";
