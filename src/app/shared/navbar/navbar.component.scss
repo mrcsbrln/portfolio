@@ -4,7 +4,7 @@
     position: absolute;
     top: 0;
     width: 100%;
-    padding: 32px;
+    padding: 32px 128px;
     background: linear-gradient(180deg, black 0%, transparent 60%);
 }
 
@@ -28,4 +28,8 @@ img {
 
 nav{
     @include dFlex($jc: space-between,$g: 16px);
+}
+
+.switch img {
+    width: 84px;
 }

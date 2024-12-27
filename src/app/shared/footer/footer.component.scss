@@ -3,7 +3,7 @@
 :host {
   @include dFlex($jc: space-between);
   background-color: $background-color-primary;
-  padding: 32px;
+  padding: 32px 128px;
   width: 100%;
 }
 
