@@ -15,6 +15,7 @@ export class ContactFormComponent {
   private http = inject(HttpClient);
 
   privacyPolicyChecked = false;
+  formSubmitted = false;
   
   contactData: ContactData = {
     name: '',
@@ -34,6 +35,7 @@ export class ContactFormComponent {
   };
 
   onSubmit(ngForm: NgForm) {
+    this.formSubmitted = true;
     if (ngForm.submitted && ngForm.form.valid) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({

@@ -66,6 +66,9 @@
       and agree to the processing of my data as outlined.
     </label>
   </div>
+  @if(!privacyPolicyChecked && formSubmitted) {
+    <span class="error"> Please accept the privacy policy. </span>
+    }
 
   <input class="submit-btn" type="submit" value="Say hello :)" />
 </form>

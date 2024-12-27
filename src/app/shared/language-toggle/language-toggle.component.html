@@ -1,0 +1,8 @@
+<div (click)="toggleLanguage()">
+    @if(languageService.currentLanguage() === 'en'){
+        <img src="/img/toggle-en.svg" alt="">
+    } @else {
+        <img src="/img/toggle-de.svg" alt="">
+    }
+</div>
+

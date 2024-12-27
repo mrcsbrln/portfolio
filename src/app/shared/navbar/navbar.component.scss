@@ -29,7 +29,3 @@ img {
 nav{
     @include dFlex($jc: space-between,$g: 16px);
 }
-
-.switch img {
-    width: 84px;
-}
