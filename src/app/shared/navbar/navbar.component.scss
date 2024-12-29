@@ -18,10 +18,6 @@ a {
     }
 }
 
-div {
-    @include dFlex($g: 16px);
-}
-
 img {
     width: 150px;
 }
@@ -29,3 +25,32 @@ img {
 nav{
     @include dFlex($jc: space-between,$g: 16px);
 }
+
+.burger-menu {
+    width: 32px;
+    cursor: pointer;
+}
+
+.left, .menu {
+    @include dFlex($g: 16px);
+}
+
+@media (min-width: 769px) {
+    .menu {
+      display: flex;
+    }
+  
+    .burger-menu {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .left {
+      display: none;
+    }
+  
+    .burger-menu {
+      display: block;
+    }
+  }
