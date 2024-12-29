@@ -15,4 +15,8 @@ export class NavbarComponent {
   toggleMobileMenu(): void {
     this.mobileMenuVisible.update((visible) => !visible);
   }
+
+  closeMobileMenu(): void {
+    this.mobileMenuVisible.set(false);
+  }
 }

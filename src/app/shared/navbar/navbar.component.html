@@ -8,8 +8,12 @@
     </div>
   </div>
   <img src="/img/mh-logo4.png" alt="" />
-  <img class="burger-menu" src="/img/burger-menu.svg" (click)="toggleMobileMenu()">
+  <img
+    class="burger-menu"
+    src="/img/burger-menu.svg"
+    (click)="toggleMobileMenu()"
+  />
 </nav>
 @if(mobileMenuVisible()){
-    <app-mobile-menu />
-    }
+<app-mobile-menu [isMenuVisible]="mobileMenuVisible" (closeEvent)="closeMobileMenu()"/>
+}
