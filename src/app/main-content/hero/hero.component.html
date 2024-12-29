@@ -11,7 +11,14 @@
   <div class="vertical-seperator"></div>
 </div>
 <div class="right-seperator-div">
-  <div class="email">{{ email }}</div>
+  <a class="email" [href]="'mailto:' + email">{{ email }}</a>
+  <a [href]="'mailto:' + email">
+    <img
+      class="email-icon"
+      [src]="emailIcon"
+      (mouseover)="onMouseOver('email')"
+      (mouseleave)="onMouseLeave('email')"
+  /></a>
   <a
     href="https://github.com/mrcsbrln"
     target="_blank"

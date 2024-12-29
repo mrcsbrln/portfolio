@@ -12,14 +12,17 @@ import { MarqueeComponent } from '../../shared/marquee/marquee.component';
 })
 export class HeroComponent {
   email = 'info@marcus-hartmann.net';
-  githubIcon: string = '/img/github1.svg';
-  linkedInIcon: string = '/img/linkedin1.svg';
+  emailIcon = '/img/email.svg';
+  githubIcon = '/img/github1.svg';
+  linkedInIcon = '/img/linkedin1.svg';
 
   onMouseOver(icon: string): void {
     if (icon === 'github') {
       this.githubIcon = '/img/github2.svg';
     } else if (icon === 'linkedin') {
       this.linkedInIcon = '/img/linkedin2.svg';
+    } else if (icon === 'email') {
+      this.emailIcon = '/img/email-hover.svg';
     }
   }
 
@@ -28,6 +31,8 @@ export class HeroComponent {
       this.githubIcon = '/img/github1.svg';
     } else if (icon === 'linkedin') {
       this.linkedInIcon = '/img/linkedin1.svg';
+    } else if (icon === 'email') {
+      this.emailIcon = '/img/email.svg';
     }
   }
 }

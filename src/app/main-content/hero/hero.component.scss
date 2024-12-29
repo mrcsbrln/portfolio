@@ -1,81 +1,110 @@
-@import '../../../styles.scss';
+@import "../../../styles.scss";
 
-:host{
-    height: 100vh;
-    background: linear-gradient(45deg, $background-color-primary 40%, $background-color-secondary 100%);
-    color: $text-color-primary;
-    @include dFlex($fd: column);
+:host {
+  height: 100vh;
+  background: linear-gradient(
+    45deg,
+    $background-color-primary 40%,
+    $background-color-secondary 100%
+  );
+  color: $text-color-primary;
+  @include dFlex($fd: column);
 }
 
 h1 {
-    font-size: 96px;
-    font-weight: 700;
-    text-align: center;
+  font-size: 96px;
+  font-weight: 700;
+  text-align: center;
 }
 
 span {
-    font-family: 'Fira-Code';
-    font-weight: 400;
-    font-size: 40px;
-    text-align: center;
+  font-family: "Fira-Code";
+  font-weight: 400;
+  font-size: 40px;
+  text-align: center;
 }
 
 .buttons-div {
-    margin-top: 32px;
-    @include dFlex($g: 32px);
+  margin-top: 32px;
+  @include dFlex($g: 32px);
 }
 
 .email {
-    width: 30px;
-    rotate: -90deg;
-    font-size: 18px;
-    &:hover {
-        color: $accent-color;
-    }
+  width: 30px;
+  rotate: -90deg;
+  font-size: 18px;
+  text-decoration: none;
+  color: #fff;
+  &:hover {
+    color: $accent-color;
+  }
+}
+
+.email-icon {
+    display: none;
+    cursor: pointer;
 }
 
 .left-seperator-div {
-    position: absolute;
-    bottom: 0;
-    left: 128px;
-    @include dFlex($fd: column, $g: 16px);
+  position: absolute;
+  bottom: 0;
+  left: 128px;
+  @include dFlex($fd: column, $g: 16px);
 }
 
 .right-seperator-div {
-    position: absolute;
-    bottom: 0;
-    right: 128px;
-    @include dFlex($fd: column, $g: 16px);
+  position: absolute;
+  bottom: 0;
+  right: 128px;
+  @include dFlex($fd: column, $g: 16px);
 }
 
 .scroll-down {
-    width: 30px;
-    height: 48px;
-    border-radius: 32px;
-    border: 1px solid $accent-color;
-    @include dFlex();
-    overflow: hidden;
-    span {
-        font-size: 16px;
-        animation: arrow-down 500ms linear alternate infinite;
-    }
+  width: 30px;
+  height: 48px;
+  border-radius: 32px;
+  border: 1px solid $accent-color;
+  @include dFlex();
+  overflow: hidden;
+  span {
+    font-size: 16px;
+    animation: arrow-down 500ms linear alternate infinite;
+  }
 }
 
 .title {
-    @include dFlex($fd: column);
+  @include dFlex($fd: column);
 }
 
 .vertical-seperator {
-    width: 1px;
-    height: 256px;
-    border: 1px solid $accent-color;
+  width: 1px;
+  height: 256px;
+  border: 1px solid $accent-color;
 }
 
 @keyframes arrow-down {
-    0% {
-        transform: translateY(-8px);
+  0% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(8px);
+  }
+}
+
+@media (max-width: 1200px) {
+    .vertical-seperator {
+        height: 192px;
     }
-    100% {
-        transform: translateY(8px);
+    .email {
+        display: none;
     }
+    .email-icon {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 64px;
+  }
 }

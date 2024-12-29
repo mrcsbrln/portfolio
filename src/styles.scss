@@ -16,6 +16,32 @@
   gap: $g;
 }
 
+
+$breakpoints: (
+  'xs': 0,
+  'sm': 576px,
+  'md': 768px,
+  'lg': 992px,
+  'xl': 1200px,
+  'xxl': 1400px
+);
+
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @if $breakpoint == 'xs' {
+      @media (max-width: map-get($breakpoints, 'sm')) {
+        @content;
+      }
+    } @else {
+      @media (min-width: map-get($breakpoints, $breakpoint)) {
+        @content;
+      }
+    }
+  } @else {
+    @warn "Keine gültigen Breakpoints für `#{$breakpoint}` gefunden.";
+  }
+}
+
 $background-color-primary: #1c1c1c;
 $background-color-secondary: #08463b;
 $text-color-primary: #D9D9D9;

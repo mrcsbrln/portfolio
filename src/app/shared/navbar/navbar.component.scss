@@ -29,28 +29,17 @@ nav{
 .burger-menu {
     width: 32px;
     cursor: pointer;
+    @include respond-to(lg) {
+      display: none;
+  }
 }
 
 .left, .menu {
     @include dFlex($g: 16px);
-}
+    display: none;
 
-@media (min-width: 769px) {
-    .menu {
-      display: flex;
+    @include respond-to(lg) {
+        display: flex; 
     }
-  
-    .burger-menu {
-      display: none;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .left {
-      display: none;
-    }
-  
-    .burger-menu {
-      display: block;
-    }
-  }
+    
+}
