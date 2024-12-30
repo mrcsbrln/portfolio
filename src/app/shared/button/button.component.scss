@@ -5,13 +5,17 @@ a {
   text-decoration: none;
   border: 1px solid white;
   border-radius: 100px;
-  padding: 0 24px;
+  padding: 0 16px;
   height: 48px;
   background: transparent;
   color: white;
   font-family: "Karla";
-  font-size: 18px;
+  font-size: 16px;
   overflow: hidden;
+  @include respond-to('sm') {
+    font-size: 18px;
+    padding: 0 24px;
+  }
   cursor: pointer;
   span {
     display: inline-block;

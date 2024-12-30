@@ -12,24 +12,43 @@
 }
 
 h1 {
-  font-size: 96px;
+  font-size: 32px;
   font-weight: 700;
   text-align: center;
+  @include respond-to('sm') {
+    font-size: 48px;
+  }
+  @include respond-to('md') {
+    font-size: 64px;
+  }
+  @include respond-to('xl') {
+    font-size: 96px;
+  }
 }
 
 span {
   font-family: "Fira-Code";
   font-weight: 400;
-  font-size: 40px;
+  font-size: 24px;
   text-align: center;
+  @include respond-to('sm') {
+    font-size: 32px;
+  }
+  @include respond-to('md') {
+    font-size: 40px;
+  }
 }
 
 .buttons-div {
   margin-top: 32px;
-  @include dFlex($g: 32px);
+  @include dFlex($g: 16px);
+  @include respond-to('sm') {
+    gap: 32px;
+  }
 }
 
-.email {
+a.email {
+  display: none;
   width: 30px;
   rotate: -90deg;
   font-size: 18px;
@@ -38,25 +57,43 @@ span {
   &:hover {
     color: $accent-color;
   }
+  @include respond-to('lg') {
+    display: inline;
+  }
 }
 
 .email-icon {
-    display: none;
+    display: inline-block;
     cursor: pointer;
+    @include respond-to('lg') {
+        display: none;
+    }
 }
 
 .left-seperator-div {
   position: absolute;
   bottom: 0;
-  left: 128px;
+  left: 32px;
   @include dFlex($fd: column, $g: 16px);
+  @include respond-to('sm') {
+    left: 64px;
+  }
+  @include respond-to('md') {
+    left: 128px;
+  }
 }
 
 .right-seperator-div {
   position: absolute;
   bottom: 0;
-  right: 128px;
+  right: 32px;
   @include dFlex($fd: column, $g: 16px);
+  @include respond-to('md') {
+    right: 64px;
+  }
+  @include respond-to('md') {
+    right: 128px;
+  }
 }
 
 .scroll-down {
@@ -78,8 +115,14 @@ span {
 
 .vertical-seperator {
   width: 1px;
-  height: 256px;
+  height: 160px;
   border: 1px solid $accent-color;
+  @include respond-to('md') {
+    height: 192px;
+  }
+  @include respond-to('lg') {
+    height: 256px;
+  }
 }
 
 @keyframes arrow-down {
@@ -88,23 +131,5 @@ span {
   }
   100% {
     transform: translateY(8px);
-  }
-}
-
-@media (max-width: 1200px) {
-    .vertical-seperator {
-        height: 192px;
-    }
-    .email {
-        display: none;
-    }
-    .email-icon {
-        display: block;
-    }
-}
-
-@media (max-width: 768px) {
-  h1 {
-    font-size: 64px;
   }
 }

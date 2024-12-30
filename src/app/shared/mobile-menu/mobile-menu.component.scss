@@ -36,7 +36,7 @@ nav {
   animation: slideIn ease-in-out 500ms;
   @keyframes slideIn {
     from {
-      transform: translateY(-220px);
+      transform: translateY(-260px);
     }
     to {
       transform: translateY(0);
@@ -44,14 +44,14 @@ nav {
   }
 }
 
-.slide-out {
-    animation: slideOut ease-in-out 500ms;
-    @keyframes slideOut {
-        from {
-            transform: translateY(0);
-        }
-        to {
-            transform: translateY(-220px);
-        }
-    }
+nav.slide-out {
+  animation: slideOut ease-in-out 500ms;
+  @keyframes slideOut {
+      from {
+          transform: translateY(0);
+      }
+      to {
+          transform: translateY(-260px);
+      }
+  }
 }

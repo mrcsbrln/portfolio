@@ -11,9 +11,12 @@
   <img
     class="burger-menu"
     src="/img/burger-menu.svg"
-    (click)="toggleMobileMenu()"
+    (click)="openMobileMenu()"
   />
 </nav>
-@if(mobileMenuVisible()){
-<app-mobile-menu [isMenuVisible]="mobileMenuVisible" (closeEvent)="closeMobileMenu()"/>
+@if(mobileMenuOpen()){
+<app-mobile-menu
+  [slideOut]="slideOut"
+  (closeEvent)="closeMobileMenu()"
+/>
 }

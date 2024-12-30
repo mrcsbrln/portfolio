@@ -10,13 +10,16 @@ import { MobileMenuComponent } from '../mobile-menu/mobile-menu.component';
   styleUrl: './navbar.component.scss',
 })
 export class NavbarComponent {
-  mobileMenuVisible = signal(false);
+  mobileMenuOpen = signal(false);
+  slideOut = signal(false);
 
-  toggleMobileMenu(): void {
-    this.mobileMenuVisible.update((visible) => !visible);
+  openMobileMenu(): void {
+    this.mobileMenuOpen.set(true);
+    this.slideOut.set(false);
   }
 
   closeMobileMenu(): void {
-    this.mobileMenuVisible.set(false);
+    this.slideOut.set(true);
+    setTimeout(() => this.mobileMenuOpen.set(false), 500);
   }
 }
