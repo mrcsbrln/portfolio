@@ -3,7 +3,13 @@
 :host {
     background: radial-gradient(circle at 0% 50%, $background-color-secondary -20%, $background-color-primary 20%);
     @include dFlex($fd: column, $g: 64px);
-    padding: 64px 128px;
+    padding: 16px;
+    @include respond-to('sm') {
+        padding: 32px 64px;
+    }
+    @include respond-to('md') {
+        padding: 32px 128px;
+    }
 }
 
 h2 {

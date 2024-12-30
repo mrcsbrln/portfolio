@@ -1,7 +1,10 @@
 @import "../../../../styles.scss";
 
 :host {
-  width: 50%;
+  width: 100%;
+  @include respond-to('lg') {
+    width: 50%;
+  }
 }
 
 form {

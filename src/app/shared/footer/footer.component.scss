@@ -3,7 +3,13 @@
 :host {
   @include dFlex($jc: space-between);
   background-color: $background-color-primary;
-  padding: 32px 128px;
+  padding: 16px;
+  @include respond-to('sm') {
+      padding: 32px 64px;
+  }
+  @include respond-to('md') {
+      padding: 32px 128px;
+  }
   width: 100%;
 }
 
@@ -16,9 +22,13 @@
 
 .center-div {
   span {
+    display: none;
     color: $accent-color;
     font-family: "Fira-Code";
     font-size: 18px;
+    @include respond-to('lg') {
+      display: inline;
+    }
   }
 }
 

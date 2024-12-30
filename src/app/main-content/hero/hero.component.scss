@@ -12,12 +12,12 @@
 }
 
 h1 {
-  font-size: 32px;
+  font-size: 48px;
   font-weight: 700;
   text-align: center;
-  @include respond-to('sm') {
-    font-size: 48px;
-  }
+  // @include respond-to('sm') {
+  //   font-size: 48px;
+  // }
   @include respond-to('md') {
     font-size: 64px;
   }
