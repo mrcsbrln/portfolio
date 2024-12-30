@@ -2,7 +2,7 @@
 
 header {
   position: fixed;
-  width: 100%;
+  width: 100vw;
   height: 100%;
   background-color: rgba($color: #000000, $alpha: 0.5);
   top: 0;
@@ -22,12 +22,9 @@ a {
 }
 
 nav {
-  @include dFlex($fd: column, $g: 16px);
-  background: linear-gradient(
-    45deg,
-    $background-color-primary 40%,
-    $background-color-secondary 100%
-  );
+  @include dFlex($fd: column, $ai: center, $g: 16px);
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.05);
   border-bottom-right-radius: 32px;
   border-bottom-left-radius: 32px;
   border-bottom: 1px solid $accent-color;

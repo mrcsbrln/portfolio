@@ -20,12 +20,14 @@ h2 {
 
 .about-me-wrapper {
   @include dFlex($ai: flex-start, $fd: column, $g: 16px);
-  flex: 1.25;
   align-self: flex-end;
   span {
     color: $accent-color;
     font-size: 24px;
     font-weight: 500;
+  }
+  @include respond-to('xl') {
+    flex: 1.25;
   }
 }
 
