@@ -1,7 +1,7 @@
 @import "../../../styles.scss";
 
 :host {
-  height: 100vh;
+  min-height: 100vh;
   background: linear-gradient(
     45deg,
     $background-color-primary 40%,
@@ -88,7 +88,7 @@ a.email {
   bottom: 0;
   right: 32px;
   @include dFlex($fd: column, $g: 16px);
-  @include respond-to('md') {
+  @include respond-to('sm') {
     right: 64px;
   }
   @include respond-to('md') {

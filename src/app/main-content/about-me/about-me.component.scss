@@ -1,67 +1,81 @@
-@import '../../../styles.scss';
+@import "../../../styles.scss";
 
 :host {
-    @include dFlex($fd: column, $ai:flex-start, $g: 128px);
-    min-height: 100vh;
-    background-color: $background-color-primary;
-    padding: 128px;
-    @include respond-to('xl') {
-        flex-direction: row;
-    }
+  @include dFlex($fd: column, $ai: flex-start, $g: 32px);
+  background-color: $background-color-primary;
+  padding: 64px;
+  @include respond-to("md") {
+    padding: 64px 128px;
+  }
+  @include respond-to("xl") {
+    flex-direction: row;
+    gap: 128px;
+  }
 }
 
 h2 {
-    font-size: 64px;
-    color: $accent-color;
+  font-size: 64px;
+  color: $accent-color;
 }
 
 .about-me-wrapper {
-    @include dFlex($ai: flex-start, $fd: column, $g: 16px);
-    flex: 1.25;
-    align-self: flex-end;
-    span {
-        color: $accent-color;
-        font-size: 24px;
-        font-weight: 500;
-    }
+  @include dFlex($ai: flex-start, $fd: column, $g: 16px);
+  flex: 1.25;
+  align-self: flex-end;
+  span {
+    color: $accent-color;
+    font-size: 24px;
+    font-weight: 500;
+  }
 }
 
 .about-me {
-    @include dFlex($fd: column, $ai: flex-start, $g: 16px);
-    background-color: $background-color-secondary;
-    padding: 32px;
-    border-radius: 30px;
-    border: 1px solid white;
+  @include dFlex($fd: column, $ai: flex-start, $g: 16px);
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 32px;
+  border-radius: 30px;
+  border: 1px solid white;
 }
 
 .icon-list {
-    @include dFlex($g: 16px);
-    p {
-        color: $accent-color;
-        &:hover {
-            color: white;
-        }
+  @include dFlex($g: 16px);
+  img {
+    width: 32px;
+  }
+  p {
+    color: $accent-color;
+    &:hover {
+      color: white;
     }
+  }
 }
 
 .portrait-div {
-    @include dFlex();
+  @include dFlex();
+  width: 350px;
+  background-image: repeating-linear-gradient(
+    45deg,
+    $accent-color,
+    $accent-color 1px,
+    $background-color-primary 1px,
+    $background-color-primary 16px
+  );
+  border-radius: 30px;
+  @include respond-to("xl") {
+    width: 100%;
     flex: 1;
-    background-image: repeating-linear-gradient(
-        45deg,
-        $accent-color,
-        $accent-color 1px,
-        $background-color-primary 1px,
-        $background-color-primary 16px
-      );
-      border-radius: 30px;     
+  }
 }
 
 .portrait {
-    position: relative;
-    left: 32px;
-    bottom: 16px;
+  position: relative;
+  left: 32px;
+  bottom: 16px;
+  width: 80%;
+  border-radius: 30px;
+  align-self: flex-start;
+  @include respond-to("xl") {
     width: 100%;
-    border-radius: 30px;
-    align-self: flex-start;
+  }
 }

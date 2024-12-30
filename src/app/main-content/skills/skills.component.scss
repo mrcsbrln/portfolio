@@ -1,10 +1,9 @@
 @import '../../../styles.scss';
 
 :host {
-    min-height: 100vh;
     background: radial-gradient(circle at 0% 50%, $background-color-secondary -20%, $background-color-primary 20%);
-    @include dFlex($g: 64px);
-    padding: 128px;
+    @include dFlex($fd: column, $g: 64px);
+    padding: 64px 128px;
 }
 
 h2 {
@@ -29,12 +28,17 @@ h3 {
 }
 
 .skills-inner-wrapper {
-    @include dFlex($ai: flex-start, $g: 64px);
+    @include dFlex($fd: column, $ai: flex-start, $g: 64px);
+    @include respond-to('xl') {
+        flex-direction: row;
+        gap: 128px;
+    }
 }
 
 .skill-set-text {
     @include dFlex($fd: column, $ai: flex-start, $g: 16px);
-    background-color: $background-color-secondary;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.05);
     padding: 32px;
     flex: 1;
     border-radius: 30px;
@@ -42,9 +46,9 @@ h3 {
 }
 
 .tech-icons {
-    @include dFlex($jc: flex-start, $g: 64px);
+    @include dFlex($jc: flex-start, $g: 32px);
     flex-wrap: wrap;
-    flex: 2;
+    flex: 1.25;
 }
 
 .tech-icon {

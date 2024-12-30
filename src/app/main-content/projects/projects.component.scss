@@ -1,90 +1,104 @@
-@import '../../../styles.scss';
+@import "../../../styles.scss";
 
 :host {
-    background-color: $background-color-primary;
-    min-height: 100vh;
-    @include dFlex($fd: column, $ai: flex-start, $jc: flex-start, $g: 32px);
-    padding: 128px;
+  background-color: $background-color-primary;
+  @include dFlex($fd: column, $ai: flex-start, $jc: flex-start, $g: 32px);
+  padding: 64px 128px;
 }
 
 h2 {
-    font-size: 64px;
-    font-family: 'Fira-Code';
-    color: $accent-color;
+  font-size: 64px;
+  font-family: "Fira-Code";
+  color: $accent-color;
+}
+
+p {
+  margin-bottom: 16px;
+  @include respond-to("xl") {
+    margin-bottom: 0;
+  }
 }
 
 span {
-    font-size: 24px;
-    color: $accent-color;
+  font-size: 24px;
+  color: $accent-color;
 }
 
 ul {
-    width: 100%;
+  width: 100%;
 }
 
 li {
-    list-style: none;
-    @include dFlex($jc: flex-start, $g: 32px);
-    align-items: stretch;
-    height: 109px;
-    cursor: pointer;
-    &:hover {
-        img, .left img {
-            display: inline;
-        }
+  list-style: none;
+  @include dFlex($jc: flex-start, $g: 32px);
+  align-items: stretch;
+  height: 109px;
+  cursor: pointer;
+  &:hover {
+    img,
+    .left img {
+      display: inline;
     }
+  }
 }
 
 .arrow {
-    display: inline;
+  display: inline;
 }
 
 .border-bottom {
-    border-bottom: 1px solid $accent-color;
+  border-bottom: 1px solid $accent-color;
 }
 
 .img-div {
-    @include dFlex();
-    background-image: repeating-linear-gradient(
-        -45deg,
-        $accent-color,
-        $accent-color 1px,
-        $background-color-primary 1px,
-        $background-color-primary 8px
-      );
-      border-radius: 16px; 
+  @include dFlex();
+  background-image: repeating-linear-gradient(
+    -45deg,
+    $accent-color,
+    $accent-color 1px,
+    $background-color-primary 1px,
+    $background-color-primary 8px
+  );
+  border-radius: 16px;
 }
 
 .left-wrapper {
-    border-top: 1px solid $accent-color;
-    padding: 40px 32px;
-    @include dFlex($jc: space-between);
-    flex: 2;
-    &:hover{
-        background-color: $background-color-secondary;
+  border-top: 1px solid $accent-color;
+  padding: 40px 32px;
+  @include dFlex($fd: column, $ai: flex-start, $g: 8px);
+  flex: 2;
+  &:hover {
+    background-color: $background-color-secondary;
+  }
+  .left {
+    font-family: "Fira-Code";
+    font-size: 24px;
+    font-weight: 700;
+    img {
+      display: none;
     }
-    .left {
-        font-family: 'Fira-Code';
-        font-size: 24px;
-        font-weight: 700;
-        img {
-            display: none;
-        }
-    }
-    .right {
-        font-size: 18px;
-    }
+  }
+  .right {
+    font-size: 18px;
+  }
+  @include respond-to("xl") {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .right-wrapper {
+  display: none;
+  flex: 1;
+  @include respond-to("lg") {
     @include dFlex();
-    flex: 1;
+  }
 }
 
 .screenshot {
-    position: relative;
-    right: 16px;
-    bottom: 16px;
-    width: 200px;
-    display: none;
+  position: relative;
+  right: 16px;
+  bottom: 16px;
+  width: 200px;
+  display: none;
 }
