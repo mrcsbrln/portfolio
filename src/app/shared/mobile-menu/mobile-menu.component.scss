@@ -1,60 +1,57 @@
-@import '../../../styles.scss';
+@import "../../../styles.scss";
 
 header {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background-color: rgba($color: #000000, $alpha: 0.5);
-    top: 0;
-    left: 0;
-    z-index: 1000;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color: #000000, $alpha: 0.5);
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 
 a {
-    display: block;
-    color: $text-color-primary;
-    text-decoration: none;
-    font-family: 'Fira-Code';
-    font-size: 20px;
-    &:active {
-        color: $accent-color;
-    }
+  display: block;
+  color: $text-color-primary;
+  text-decoration: none;
+  font-family: "Fira-Code";
+  font-size: 20px;
+  &:active {
+    color: $accent-color;
+  }
 }
 
 nav {
-    @include dFlex($fd: column, $g: 16px);
-    background: linear-gradient(45deg, $background-color-primary 40%, $background-color-secondary 100%);
-    border-bottom-right-radius: 32px;
-    border-bottom-left-radius: 32px;
-    border-bottom: 1px solid $accent-color;
-    padding: 64px;
-    z-index: 1001;
-    transform: translateY(-220px);
-    transition: transform 500ms ease-in-out;
-    &.open {
-        transform: translateY(0);
-      }
+  @include dFlex($fd: column, $g: 16px);
+  background: linear-gradient(
+    45deg,
+    $background-color-primary 40%,
+    $background-color-secondary 100%
+  );
+  border-bottom-right-radius: 32px;
+  border-bottom-left-radius: 32px;
+  border-bottom: 1px solid $accent-color;
+  padding: 64px;
+  z-index: 1001;
+  animation: slideIn ease-in-out 500ms;
+  @keyframes slideIn {
+    from {
+      transform: translateY(-220px);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
 }
 
-
-
-
-// @media (min-width: 769px) {
-//     .menu {
-//       display: flex;
-//     }
-  
-//     .burger-menu {
-//       display: none;
-//     }
-//   }
-
-//   @media (max-width: 768px) {
-//     .menu {
-//       display: none;
-//     }
-  
-//     .burger-menu {
-//       display: block;
-//     }
-//   }
+.slide-out {
+    animation: slideOut ease-in-out 500ms;
+    @keyframes slideOut {
+        from {
+            transform: translateY(0);
+        }
+        to {
+            transform: translateY(-220px);
+        }
+    }
+}

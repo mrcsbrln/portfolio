@@ -1,5 +1,5 @@
 <header (click)="closeMobileMenu()">
-  <nav (click)="$event.stopPropagation()" [ngClass]="{ 'open': isMenuVisible }">
+  <nav (click)="$event.stopPropagation()" [ngClass]="{ 'slide-out': !isMenuVisible }">
     <div class="menu">
       <a href="#about-me" (click)="closeMobileMenu()">About me</a>
       <a href="#skills" (click)="closeMobileMenu()">Skills</a>
