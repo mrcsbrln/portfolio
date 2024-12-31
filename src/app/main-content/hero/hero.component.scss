@@ -15,9 +15,6 @@ h1 {
   font-size: 48px;
   font-weight: 700;
   text-align: center;
-  // @include respond-to('sm') {
-  //   font-size: 48px;
-  // }
   @include respond-to('md') {
     font-size: 64px;
   }
@@ -115,9 +112,9 @@ a.email {
 
 .vertical-seperator {
   width: 1px;
-  height: 160px;
+  height: 10vh;
   border: 1px solid $accent-color;
-  @include respond-to('md') {
+  @include respond-to('sm') {
     height: 192px;
   }
   @include respond-to('lg') {

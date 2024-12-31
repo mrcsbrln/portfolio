@@ -1,131 +1,180 @@
-@import '../../../styles.scss';
+@import "../../../styles.scss";
 
 :host {
-    background-color: rgba(0, 0, 0, 0.5);
-    @include dFlex();
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  @include dFlex();
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 h2 {
-    font-family: 'Fira-Code';
+  font-family: "Fira-Code";
+  font-size: 48px;
+  font-weight: 700;
+  @include respond-to("lg") {
     font-size: 64px;
-    font-weight: 700;
+  }
 }
 
 .button-div {
-    @include dFlex($jc: flex-start, $g: 32px);
-    a {
-        @include dFlex($g: 8px);
-        text-decoration: none;
-        border: 1px solid white;
-        border-radius: 100px;
-        padding: 0 24px;
-        height: 48px;
-        background: transparent;
-        color: white;
-        font-family: "Karla";
-        font-size: 18px;
-        transition: all 0.6s ease;
-        img {
-            transition: transform 0.6s ease;
-            transform: translate(0);
-        }
-        &:hover {
-            border-color: $accent-color;
-            color: $accent-color;
-            img {
-                transform: translate(6px, -3px);
-            }
-        }
+  @include dFlex($jc: flex-start, $g: 16px);
+  margin-top: 8px;
+  @include respond-to('sm') {
+    gap: 32px;
+  }
+  a {
+    @include dFlex($g: 8px);
+    text-decoration: none;
+    border: 1px solid white;
+    border-radius: 100px;
+    padding: 12px 16px;
+    background: transparent;
+    color: white;
+    font-family: "Karla";
+    font-size: 18px;
+    transition: all 0.6s ease;
+    img {
+      transition: transform 0.6s ease;
+      transform: translate(0);
     }
+    &:hover {
+      border-color: $accent-color;
+      color: $accent-color;
+      img {
+        transform: translate(6px, -3px);
+      }
+    }
+  }
 }
 
 .cancel {
+  position: relative;
+  height: 50px;
+  align-self: flex-end;
+  @include dFlex($jc: center);
+  cursor: pointer;
+  @include respond-to("lg") {
     position: absolute;
     top: 32px;
     right: 32px;
     width: 100px;
-    height: 50px;
-    @include dFlex($jc: center);
-    cursor: pointer;
+  }
 }
 
 .main-div {
-    @include dFlex($g: 32px);
-    width: 100%;
+  @include dFlex($fd: column-reverse, $jc: space-between, $g: 32px);
+  width: 100%;
+  @include respond-to("lg") {
+    flex-direction: row;
+  }
 }
 
 .overlay {
-    position: relative;
-    border-radius: 32px;
-    border: 1px solid $accent-color;
-    background: linear-gradient(45deg, $background-color-primary 40%, $background-color-secondary 100%);
-    padding: 64px;
-    z-index: 1000;
-    overflow: hidden;
-    @include dFlex($fd: column, $g: 16px);
-    width: 80%;
-    height: 90vh;
-    button {
-        background: none;
-        border: none;
-        color: $accent-color;
-        cursor: pointer;
-        font-family: 'Karla';
-        font-size: 18px;
-        align-self: flex-end;
-        @include dFlex($g: 8px);
-        transition: all 0.6s ease;
-        img {
-            transition: transform 0.6s ease; 
-        }
-        &:hover {
-            color: white;
-            img {
-                transform: translateX(8px);
-            }
-        }
+  position: fixed;
+  border-radius: 32px;
+  border: 1px solid $accent-color;
+  background: linear-gradient(
+    45deg,
+    $background-color-primary 40%,
+    $background-color-secondary 100%
+  );
+  padding: 16px;
+  z-index: 1000;
+  overflow-y: auto;
+  @include dFlex($fd: column, $jc: flex-start, $g: 16px);
+  width: 90%;
+  height: 90%;
+  button {
+    background: none;
+    border: none;
+    color: $accent-color;
+    cursor: pointer;
+    font-family: "Karla";
+    font-size: 18px;
+    align-self: flex-end;
+    @include dFlex($g: 8px);
+    transition: all 0.6s ease;
+    img {
+      transition: transform 0.6s ease;
     }
+    &:hover {
+      color: white;
+      img {
+        transform: translateX(8px);
+      }
+    }
+  }
+  @include respond-to("xl") {
+    padding: 64px;
+  }
+  @include respond-to("lg") {
+  }
+  @include respond-to("md") {
+  }
+  @include respond-to("sm") {
+    padding: 32px;
+  }
 }
 
 .project-info {
-    @include dFlex($fd: column, $ai: space-between, $g: 32px);
-    flex-grow: 1;
-    > span:first-of-type {
-        font-size: 128px;
-        font-weight: 700;
-        color: $accent-color;
+  @include dFlex($fd: column, $ai: space-between, $g: 8px);
+  width: 100%;
+  @include respond-to("lg") {
+    gap: 16px;
+    width: 50%;
+  }
+  > span:first-of-type {
+    font-size: 72px;
+    font-weight: 700;
+    color: $accent-color;
+    @include respond-to("lg") {
+      font-size: 128px;
+      gap: 32px;
     }
-    > span:nth-of-type(2) {
-        color: $accent-color;
-        font-family: 'Fira-Code';
-        font-size: 24px;
-        font-weight: 700;
-    }
+  }
+  > span:nth-of-type(2) {
+    color: $accent-color;
+    font-family: "Fira-Code";
+    font-size: 24px;
+    font-weight: 700;
+  }
 }
 
 .project-img {
-    @include dFlex();
-    img {
-        width: 450px;
+  @include dFlex($jc: flex-start);
+  width: 100%;
+  @include respond-to("lg") {
+    width: 50%;
+  }
+  img {
+    max-width: 100%;
+    max-height: 30vh;
+    object-fit: cover;
+    border-radius: 16px;
+    @include respond-to("lg") {
+      height: 100%;
     }
+  }
 }
 
 .stack-icons {
-    @include dFlex($jc: flex-start, $g: 32px);
+  @include dFlex($jc: flex-start, $g: 16px);
+  flex-wrap: wrap;
+  @include respond-to('lg') {
+    gap: 32px;
+  }
 }
 
 .stack-icon {
-    @include dFlex($g:8px);
-    span {
-        font-size: 16px;
-    }
-    img {
-        height: 24px;
-    }
+  @include dFlex($g: 8px);
+  span {
+    font-size: 16px;
+  }
+  img {
+    height: 24px;
+  }
 }
