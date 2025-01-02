@@ -11,7 +11,7 @@
       <span>{{ getFormattedId(project?.id || 0) }}</span>
       <h2>{{ project?.title }}</h2>
       <span>{{ 'overlay.question' | translate}}</span>
-      <p>{{ project?.description }}</p>
+      <p>{{ 'overlay.description.' + project?.id | translate }}</p>
       <div class="stack-icons">
         @for(stackIconPath of getStackIconPath(); track $index) {
         <div class="stack-icon">
@@ -44,6 +44,6 @@
     (mouseover)="onMouseOver('arrow-right')"
     (mouseleave)="onMouseLeave('arrow-right')"
   >
-    Next project <img src="/img/arrow-right.svg" [src]="arrowRightIconPath" />
+    {{'overlay.next' | translate}} <img src="/img/arrow-right.svg" [src]="arrowRightIconPath" />
   </button>
 </div>

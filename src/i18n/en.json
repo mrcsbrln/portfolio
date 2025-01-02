@@ -39,7 +39,13 @@
     "text": "Explore a selection of my work here - Interact with projects to see my skills in action."
   },
   "overlay": {
-    "question": "What is this project about?"
+    "question": "What is this project about?",
+    "description": {
+      "1": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+      "2": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
+      "3": "This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization."
+    },
+    "next": "Next project"
   },
   "contact": {
     "subtitle": "Contact me",

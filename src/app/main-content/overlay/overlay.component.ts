@@ -15,7 +15,7 @@ export class OverlayComponent {
   @Input() projects: Project[] = [];
   @Output() close = new EventEmitter<void>();
 
-  private currentIndex: number = 0;
+  currentIndex: number = 0;
   cancelIconPath = '/img/cancel.svg';
   arrowRightIconPath = '/img/arrow-right.svg'
 
