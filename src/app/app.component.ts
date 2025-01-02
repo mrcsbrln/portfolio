@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, effect, inject } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { MainContentComponent } from "./main-content/main-content.component";
 import { FooterComponent } from "./shared/footer/footer.component";
@@ -25,10 +25,14 @@ export class AppComponent {
   constructor() {
     this.translate.addLangs(['de', 'en']);
     this.translate.setDefaultLang('en');
-    this.translate.use(this.languageToggleService.currentLanguage());
+    effect(() => {
+      const currentLanguage = this.languageToggleService.currentLanguage();
+      this.translate.use(currentLanguage);
+    });
     this.translate.setTranslation('en', translationsEN);
     this.translate.setTranslation('de', translationsDE);
 }
   title = 'portfolio';
 
+  
 }
