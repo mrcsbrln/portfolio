@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { NavbarComponent } from '../../shared/navbar/navbar.component';
 import { ButtonComponent } from '../../shared/button/button.component';
 import { MarqueeComponent } from '../../shared/marquee/marquee.component';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [NavbarComponent, ButtonComponent, MarqueeComponent],
+  imports: [NavbarComponent, ButtonComponent, MarqueeComponent, TranslatePipe],
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.scss',
 })

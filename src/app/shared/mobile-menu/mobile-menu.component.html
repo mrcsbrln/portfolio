@@ -1,9 +1,9 @@
 <header (click)="closeMobileMenu()">
   <nav (click)="$event.stopPropagation()" [ngClass]="{ 'slide-out': slideOut() }">
     <div class="menu">
-      <a href="#about-me" (click)="closeMobileMenu()">About me</a>
-      <a href="#skills" (click)="closeMobileMenu()">Skills</a>
-      <a href="#projects" (click)="closeMobileMenu()">Projects</a>
+      <a href="#about-me" (click)="closeMobileMenu()">{{ 'nav.aboutMe' | translate }}</a>
+      <a href="#skills" (click)="closeMobileMenu()">{{ 'nav.skills' | translate }}</a>
+      <a href="#projects" (click)="closeMobileMenu()">{{ 'nav.projects' | translate }}</a>
     </div>
     <app-language-toggle />
   </nav>

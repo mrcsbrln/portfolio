@@ -1,7 +1,25 @@
 {
-    "nav": {
-      "aboutMe": "About me",
-      "skills": "Skills",
-      "projects": "Projects"
-    }
+  "nav": {
+    "aboutMe": "About me",
+    "skills": "Skills",
+    "projects": "Projects"
+  },
+  "hero": {
+    "subtitle": "Frontend Developer"
+  },
+  "heroBtn": {
+    "projects": "Check my work",
+    "contact": "Contact me"
+  },
+  "marquee": {
+    "item1": "Avaiable for remote work",
+    "item2": "Frontend Developer",
+    "item3": "Based in Berlin",
+    "item4": "Open to work"
+  },
+  "aboutMe": {
+    "subtitle": "Who I am",
+    "title": "About me"
   }
+
+}

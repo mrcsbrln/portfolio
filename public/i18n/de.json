@@ -1,7 +1,24 @@
 {
-    "nav": {
-      "aboutMe": "Über mich",
-      "skills": "Fähigkeiten",
-      "projects": "Projekte"
-    }
+  "nav": {
+    "aboutMe": "Über mich",
+    "skills": "Fähigkeiten",
+    "projects": "Projekte"
+  },
+  "hero": {
+    "subtitle": "Frontend Entwickler"
+  },
+  "heroBtn": {
+    "projects": "Meine Projekte",
+    "contact": "Schreib mir"
+  },
+  "marquee": {
+    "item1": "Remote Arbeiten möglich",
+    "item2": "Frontend Entwickler",
+    "item3": "Aus Berlin",
+    "item4": "Offen für neue Herausforderungen"
+  },
+  "aboutMe": {
+    "subtitle": "Wer ich bin",
+    "title": "Über mich"
   }
+}
