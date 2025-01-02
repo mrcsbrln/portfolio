@@ -40,5 +40,13 @@
   },
   "overlay": {
     "question": "What is this project about?"
+  },
+  "contact": {
+    "subtitle": "Contact me",
+    "title": "Let's work together",
+    "question1": "Got a problem to solve?",
+    "text": "Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.",
+    "question2": "Need a Frontend developer?",
+    "cta": "Let´s talk!"
   }
 }

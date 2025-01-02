@@ -32,7 +32,7 @@
     "q2": "weitere Fähigkeiten?",
     "text": "Auf meinem Weg habe ich an vielfältigen Projekten gearbeitet und dabei eine Reihe von Frontend-Technologien und Konzepten eingesetzt. Ich bin offen dafür, neue Technologien und Methoden zu erlernen, um meine Fähigkeiten kontinuierlich zu verbessern und in der sich ständig wandelnden Welt der Webentwicklung stets einen Schritt voraus zu sein.",
     "ctaContact": "Zögern Sie nicht, mich zu kontaktieren. Ich freue mich darauf, mein bisheriges Wissen weiter auszubauen.",
-    "ctaBtn": "Kontaktieren Sie mich"  
+    "ctaBtn": "Kontaktieren Sie mich"
   },
   "projects": {
     "title": "Ausgewählte Projekte",
@@ -40,5 +40,13 @@
   },
   "overlay": {
     "question": "Worum geht es in diesem Projekt?"
+  },
+  "contact": {
+    "subtitle": "Kontaktieren Sie mich",
+    "title": "Lass uns zusammenarbeiten",
+    "question1": "Hast du ein Problem zu lösen?",
+    "text": "Kontaktiere mich über dieses Formular. Ich bin daran interessiert, von dir zu hören, deine Ideen kennenzulernen und mit meiner Arbeit zu deinen Projekten beizutragen.",
+    "question2": "Brauchst du einen Frontend-Entwickler?",
+    "cta": "Lass uns reden!"
   }
 }
