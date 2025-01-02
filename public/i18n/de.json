@@ -19,6 +19,26 @@
   },
   "aboutMe": {
     "subtitle": "Wer ich bin",
-    "title": "Über mich"
+    "title": "Über mich",
+    "text": "Hi, ich bin Frontend-Entwickler(in) aus Berlin. Die unbegrenzten Möglichkeiten in der IT faszinieren mich, und ich freue mich darauf, Websites und Anwendungen zu gestalten, die sowohl ansprechend als auch benutzerfreundlich sind.",
+    "location": "Flexibel in Bezug auf Arbeitsumgebungen: Ich kann sowohl vor Ort in Berlin als auch remote effektiv arbeiten. Für einen Umzug nach München bin ich ebenfalls offen.",
+    "mindset": "Ich bin aufgeschlossen und stets auf der Suche nach persönlichen Herausforderungen, um mein Wissen und meine Fähigkeiten kontinuierlich zu verbessern.",
+    "profession": "In meinem Beruf geht es beim Programmieren nicht nur darum, Code zu schreiben – es ist eine kreative Art des Problemlösens. Ich bin stolz darauf, komplexe technische Herausforderungen in einfache, benutzerfreundliche Lösungen zu verwandeln. So helfe ich dabei, Ihre Ziele zu erreichen und Ihre Visionen zum Leben zu erwecken."
+  },
+  "skills": {
+    "subtitle": "Technologien",
+    "title": "Fähigkeiten",
+    "q1": "Du benötigst",
+    "q2": "weitere Fähigkeiten?",
+    "text": "Auf meinem Weg habe ich an vielfältigen Projekten gearbeitet und dabei eine Reihe von Frontend-Technologien und Konzepten eingesetzt. Ich bin offen dafür, neue Technologien und Methoden zu erlernen, um meine Fähigkeiten kontinuierlich zu verbessern und in der sich ständig wandelnden Welt der Webentwicklung stets einen Schritt voraus zu sein.",
+    "ctaContact": "Zögern Sie nicht, mich zu kontaktieren. Ich freue mich darauf, mein bisheriges Wissen weiter auszubauen.",
+    "ctaBtn": "Kontaktieren Sie mich"  
+  },
+  "projects": {
+    "title": "Ausgewählte Projekte",
+    "text": "Entdecken Sie hier eine Auswahl meiner Arbeiten – interagieren Sie mit den Projekten, um meine Fähigkeiten in Aktion zu sehen."
+  },
+  "overlay": {
+    "question": "Worum geht es in diesem Projekt?"
   }
 }

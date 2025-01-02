@@ -1,11 +1,12 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Project } from '../../interfaces/project.interface';
 import { ButtonComponent } from '../../shared/button/button.component';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-overlay',
   standalone: true,
-  imports: [ButtonComponent],
+  imports: [ButtonComponent, TranslatePipe],
   templateUrl: './overlay.component.html',
   styleUrl: './overlay.component.scss',
 })

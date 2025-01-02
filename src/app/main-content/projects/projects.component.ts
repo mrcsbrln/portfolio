@@ -3,11 +3,12 @@ import { Project } from '../../interfaces/project.interface';
 import { OverlayComponent } from '../overlay/overlay.component';
 import { ProjectsService } from './projects.service';
 import { CommonModule } from '@angular/common';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [CommonModule, OverlayComponent],
+  imports: [CommonModule, OverlayComponent, TranslatePipe],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss',
 })

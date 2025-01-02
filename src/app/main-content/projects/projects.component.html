@@ -1,10 +1,6 @@
 <span>Portfolio</span>
-<h2>Featured Projects</h2>
-<p>
-  Lorem ipsum dolor sit amet, consetetur sadipscing elitr,<br />
-  sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-  erat,
-</p>
+<h2>{{'projects.title' | translate}}</h2>
+<p>{{'projects.text' | translate}}</p>
 <ul>
   @for (project of projects; track project.id; let isLast = $last) {
   <li>

@@ -10,7 +10,7 @@
     <div class="project-info">
       <span>{{ getFormattedId(project?.id || 0) }}</span>
       <h2>{{ project?.title }}</h2>
-      <span>What is this project about?</span>
+      <span>{{ 'overlay.question' | translate}}</span>
       <p>{{ project?.description }}</p>
       <div class="stack-icons">
         @for(stackIconPath of getStackIconPath(); track $index) {
