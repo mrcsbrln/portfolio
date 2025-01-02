@@ -94,6 +94,8 @@ span {
     }
   }
   a.email {
+    width: 30px;
+    transform: translateX(-16px);
     display: none;
     rotate: -90deg;
     font-size: 18px;
