@@ -47,8 +47,8 @@ $breakpoints: (
   }
 }
 
-@mixin respond-to-landscape-lg {
-  @media screen and (orientation: landscape) and (max-width: map-get($breakpoints, "lg")) {
+@mixin respond-to-landscape {
+  @media screen and (orientation: landscape) and (pointer: coarse) {
     @content;
   }
 }
