@@ -2,6 +2,9 @@
 
 :host {
   min-height: 100vh;
+  @include respond-to-landscape-lg {
+    min-height: 150vh;
+  }
   background: linear-gradient(
     45deg,
     $background-color-primary 40%,
@@ -38,9 +41,10 @@ span {
 
 .buttons-div {
   margin-top: 32px;
-  @include dFlex($g: 16px);
+  @include dFlex($fd: column, $g: 16px);
   @include respond-to('sm') {
     gap: 32px;
+    flex-direction: row;
   }
 }
 
@@ -71,6 +75,9 @@ a.email {
   position: absolute;
   bottom: 0;
   left: 32px;
+  @include respond-to-landscape-lg {
+    bottom: -50vh;
+  }
   @include dFlex($fd: column, $g: 16px);
   @include respond-to('sm') {
     left: 64px;
@@ -84,12 +91,21 @@ a.email {
   position: absolute;
   bottom: 0;
   right: 32px;
+  @include respond-to-landscape-lg {
+    bottom: -50vh;
+  }
   @include dFlex($fd: column, $g: 16px);
   @include respond-to('sm') {
     right: 64px;
   }
   @include respond-to('md') {
     right: 128px;
+  }
+  .vertical-seperator {
+    height: 15vh;
+    @include respond-to('sm') {
+      height: 25vh;
+    }
   }
 }
 
@@ -112,7 +128,7 @@ a.email {
 
 .vertical-seperator {
   width: 1px;
-  height: 10vh;
+  height: 25vh;
   border: 1px solid $accent-color;
   @include respond-to('sm') {
     height: 192px;

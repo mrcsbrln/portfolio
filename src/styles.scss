@@ -1,3 +1,18 @@
+$background-color-primary: #1c1c1c;
+$background-color-secondary: #08463b;
+$text-color-primary: #d9d9d9;
+$accent-color: #3dcfb6;
+$error-text: #ec7b7bcc;
+
+$breakpoints: (
+  "xs": 0,
+  "sm": 576px,
+  "md": 768px,
+  "lg": 992px,
+  "xl": 1200px,
+  "xxl": 1400px,
+);
+
 @font-face {
   font-family: "Fira-Code";
   src: url(/fonts/Fira_Code/FiraCode-VariableFont_wght.ttf);
@@ -16,20 +31,10 @@
   gap: $g;
 }
 
-
-$breakpoints: (
-  'xs': 0,
-  'sm': 576px,
-  'md': 768px,
-  'lg': 992px,
-  'xl': 1200px,
-  'xxl': 1400px
-);
-
 @mixin respond-to($breakpoint) {
   @if map-has-key($breakpoints, $breakpoint) {
-    @if $breakpoint == 'xs' {
-      @media (max-width: map-get($breakpoints, 'sm')) {
+    @if $breakpoint == "xs" {
+      @media (max-width: map-get($breakpoints, "sm")) {
         @content;
       }
     } @else {
@@ -42,11 +47,11 @@ $breakpoints: (
   }
 }
 
-$background-color-primary: #1c1c1c;
-$background-color-secondary: #08463b;
-$text-color-primary: #D9D9D9;
-$accent-color: #3DCFB6;
-$error-text: #EC7B7BCC;
+@mixin respond-to-landscape-lg {
+  @media screen and (orientation: landscape) and (max-width: map-get($breakpoints, "lg")) {
+    @content;
+  }
+}
 
 * {
   margin: 0;

@@ -21,10 +21,11 @@ h2 {
 }
 
 .button-div {
-  @include dFlex($jc: flex-start, $g: 16px);
-  margin-top: 8px;
+  @include dFlex($g: 32px);
+  padding: 8px 0;
   @include respond-to('sm') {
     gap: 32px;
+    justify-content: flex-start;
   }
   a {
     @include dFlex($g: 8px);
@@ -111,12 +112,9 @@ h2 {
   @include respond-to("xl") {
     padding: 64px;
   }
-  @include respond-to("lg") {
-  }
-  @include respond-to("md") {
-  }
   @include respond-to("sm") {
     padding: 32px;
+    justify-content: center;
   }
 }
 
@@ -164,6 +162,7 @@ h2 {
 .stack-icons {
   @include dFlex($jc: flex-start, $g: 16px);
   flex-wrap: wrap;
+  padding: 8px 0;
   @include respond-to('lg') {
     gap: 32px;
   }

@@ -6,8 +6,8 @@
   background-color: rgba(255, 255, 255, 0.05);
   position: absolute;
   bottom: 25px;
-  padding: 8px 0;
-  font-size: 18px;
+  padding: 12px 0;
+  font-size: 24px;
   font-weight: 400;
   transform: rotate(-3deg);
   overflow: hidden;
@@ -15,6 +15,11 @@
     bottom: 50px;
     padding: 16px 0;
     font-size: 32px;
+  }
+  @include respond-to-landscape-lg {
+    bottom: -43vh;
+    padding: 12px 0;
+    font-size: 24px;
   }
 }
 
