@@ -11,7 +11,7 @@ export class ProjectsService {
       title: 'Join',
       stack: ['Angular', 'Typescript', 'HTML', 'CSS', 'Firebase'],
       imageUrl: '/img/join.png',
-      description: '',
+      description: 'https://join.marcus-hartmann.net/',
       gitHubUrl: 'https://github.com/KevinPerret/Join',
       projectUrl: '',
     },
@@ -22,7 +22,7 @@ export class ProjectsService {
       imageUrl: '/img/el-pollo-loco.png',
       description: '',
       gitHubUrl: 'https://github.com/mrcsbrln/el_pollo_loco',
-      projectUrl: '',
+      projectUrl: 'https://elpolloloco.marcus-hartmann.net/',
     },
 
     {
@@ -32,7 +32,7 @@ export class ProjectsService {
       imageUrl: '/img/da-bubble.png',
       description: '',
       gitHubUrl: '',
-      projectUrl: '',
+      projectUrl: 'https://dabubble.marcus-hartmann.net/',
     },
   ];
 
