@@ -41,6 +41,7 @@
         a{
         color: white;
         text-decoration: none;
+        @include transition-all;
         &:hover {
             color: $accent-color;
         }

@@ -50,6 +50,7 @@ h2 {
   }
   p {
     color: $accent-color;
+    @include transition-all;
     &:hover {
       color: white;
     }

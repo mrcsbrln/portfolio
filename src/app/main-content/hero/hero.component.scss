@@ -18,10 +18,10 @@ h1 {
   font-size: 48px;
   font-weight: 700;
   text-align: center;
-  @include respond-to('md') {
+  @include respond-to("md") {
     font-size: 64px;
   }
-  @include respond-to('xl') {
+  @include respond-to("xl") {
     font-size: 96px;
   }
 }
@@ -31,10 +31,10 @@ span {
   font-weight: 400;
   font-size: 24px;
   text-align: center;
-  @include respond-to('sm') {
+  @include respond-to("sm") {
     font-size: 32px;
   }
-  @include respond-to('md') {
+  @include respond-to("md") {
     font-size: 40px;
   }
 }
@@ -42,19 +42,18 @@ span {
 .buttons-div {
   margin-top: 32px;
   @include dFlex($fd: column, $g: 16px);
-  @include respond-to('sm') {
+  @include respond-to("sm") {
     gap: 32px;
     flex-direction: row;
   }
 }
 
-
 .email-icon {
-    display: inline-block;
-    cursor: pointer;
-    @include respond-to('lg') {
-        display: none;
-    }
+  display: inline-block;
+  cursor: pointer;
+  @include respond-to("lg") {
+    display: none;
+  }
 }
 
 .left-seperator-div {
@@ -65,10 +64,10 @@ span {
     bottom: -50vh;
   }
   @include dFlex($fd: column, $g: 16px);
-  @include respond-to('sm') {
+  @include respond-to("sm") {
     left: 64px;
   }
-  @include respond-to('md') {
+  @include respond-to("md") {
     left: 128px;
   }
 }
@@ -81,15 +80,15 @@ span {
     bottom: -50vh;
   }
   @include dFlex($fd: column, $g: 16px);
-  @include respond-to('sm') {
+  @include respond-to("sm") {
     right: 64px;
   }
-  @include respond-to('md') {
+  @include respond-to("md") {
     right: 128px;
   }
   .vertical-seperator {
     height: 15vh;
-    @include respond-to('sm') {
+    @include respond-to("sm") {
       height: 25vh;
     }
   }
@@ -101,13 +100,18 @@ span {
     font-size: 18px;
     text-decoration: none;
     color: #fff;
+    @include transition-all;
     &:hover {
       color: $accent-color;
     }
-    @include respond-to('lg') {
+    @include respond-to("lg") {
       display: inline;
     }
   }
+}
+
+a img {
+  @include transition-all;
 }
 
 .scroll-down {
@@ -131,10 +135,10 @@ span {
   width: 1px;
   height: 25vh;
   border: 1px solid $accent-color;
-  @include respond-to('sm') {
+  @include respond-to("sm") {
     height: 192px;
   }
-  @include respond-to('lg') {
+  @include respond-to("lg") {
     height: 256px;
   }
 }

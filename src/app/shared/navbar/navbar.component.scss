@@ -19,7 +19,8 @@ a {
     text-decoration: none;
     font-family: 'Fira-Code';
     font-size: 20px;
-    &:active {
+    @include transition-all;
+    &:hover {
         color: $accent-color;
     }
 }

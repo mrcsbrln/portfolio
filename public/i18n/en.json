@@ -70,5 +70,8 @@
     "privacyPolicy3": "and agree to the processing of my data as outlined.",
     "privacyPolicyError": "Please accept the privacy policy.",
     "submitBtn": "Say hello :)"
+  },
+  "imprint": {
+    "title": "Imprint"
   }
 }

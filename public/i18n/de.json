@@ -70,5 +70,8 @@
     "privacyPolicy3": "gelesen und stimme der Verarbeitung meiner Daten gemäß den Angaben zu.",
     "privacyPolicyError": "Bitte akzeptieren Sie die Datenschutzrichtlinie.",
     "submitBtn": "Sagen Sie hallo :)"
+  },
+  "imprint": {
+    "title": "Impressum"
   }
 }

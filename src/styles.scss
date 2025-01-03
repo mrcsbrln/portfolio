@@ -23,12 +23,35 @@ $breakpoints: (
   src: url(/fonts/Karla/Karla-VariableFont_wght.ttf);
 }
 
+@keyframes scroll-text {
+  0% {
+    transform: translateX(0%);
+  }
+  49.99% {
+    transform: translateX(-200%);
+  }
+  50% {
+    transform: translateX(200%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
 @mixin dFlex($fd: row, $jc: center, $ai: center, $g: 0px) {
   display: flex;
   flex-direction: $fd;
   justify-content: $jc;
   align-items: $ai;
   gap: $g;
+}
+
+@mixin transition-all {
+  transition: all 125ms ease;
+}
+
+@mixin scroll-text-animation($duration: 2s, $iteration: infinite, $timing: linear) {
+  animation: scroll-text $duration $iteration $timing;
 }
 
 @mixin respond-to($breakpoint) {
@@ -68,3 +91,5 @@ body {
 .no-scroll {
   overflow: hidden;
 }
+
+

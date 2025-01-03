@@ -76,6 +76,7 @@ li {
   }
   @include dFlex($fd: column, $ai: flex-start, $g: 8px);
   flex: 2;
+  @include transition-all;
   &:hover {
     background-color: $background-color-secondary;
   }
