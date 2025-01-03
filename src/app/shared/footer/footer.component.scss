@@ -1,7 +1,6 @@
 @import "../../../styles.scss";
 
 :host {
-  @include dFlex($jc: space-between);
   background-color: $background-color-primary;
   padding: 16px;
   @include respond-to('sm') {
@@ -48,4 +47,10 @@
         }
     }
   }
+}
+
+.wrapper{
+  @include dFlex($jc: space-between);
+  @include max-width;
+  width: 100%;
 }

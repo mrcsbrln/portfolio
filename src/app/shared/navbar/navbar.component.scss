@@ -32,6 +32,7 @@ img {
 
 nav{
     @include dFlex($jc: space-between,$g: 16px);
+    @include max-width;
 }
 
 .burger-menu {
