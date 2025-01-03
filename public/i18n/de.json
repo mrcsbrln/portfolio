@@ -54,5 +54,21 @@
     "text": "Kontaktiere mich über dieses Formular. Ich bin daran interessiert, von dir zu hören, deine Ideen kennenzulernen und mit meiner Arbeit zu deinen Projekten beizutragen.",
     "question2": "Brauchst du einen Frontend-Entwickler?",
     "cta": "Lass uns reden!"
+  },
+  "contactForm": {
+    "nameLabel": "Wie heißen Sie?",
+    "namePlaceholder": "Ihr Name kommt hier hin",
+    "nameError": "Hoppla! Es scheint, dass Ihr Name fehlt.",
+    "emailLabel": "Wie lautet Ihre E-Mail?",
+    "emailPlaceholder": "ihreemail@email.com",
+    "emailError": "Hoppla! Ihre E-Mail-Adresse wird benötigt.",
+    "messageLabel": "Wie kann ich Ihnen helfen?",
+    "messagePlaceholder": "Geben Sie eine Nachricht ein...",
+    "messageError": "Was möchten Sie entwickeln?",
+    "privacyPolicy1": "Ich habe die",
+    "privacyPolicy2": "Datenschutzrichtlinie",
+    "privacyPolicy3": "gelesen und stimme der Verarbeitung meiner Daten gemäß den Angaben zu.",
+    "privacyPolicyError": "Bitte akzeptieren Sie die Datenschutzrichtlinie.",
+    "submitBtn": "Sagen Sie hallo :)"
   }
 }

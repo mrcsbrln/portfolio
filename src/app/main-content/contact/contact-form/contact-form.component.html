@@ -1,6 +1,6 @@
 <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
   <div class="form-row">
-    <label for="fname">What´s your name?</label>
+    <label for="fname">{{ "contactForm.nameLabel" | translate }}</label>
     <input
       #name="ngModel"
       [(ngModel)]="contactData.name"
@@ -9,15 +9,15 @@
       name="name"
       [placeholder]="
         !name.valid && name.touched
-          ? 'Oops! it seems your name is missing'
-          : 'Your name goes here'
+          ? ('contactForm.nameError' | translate)
+          : ('contactForm.namePlaceholder' | translate)
       "
       required
     />
   </div>
 
   <div class="form-row">
-    <label for="email">What´s your email?</label>
+    <label for="email">{{ "contactForm.emailLabel" | translate }}</label>
     <input
       #email="ngModel"
       [(ngModel)]="contactData.email"
@@ -26,8 +26,8 @@
       name="email"
       [placeholder]="
         !email.valid && email.touched
-          ? 'Hoppla! your email is required'
-          : 'your-email@email.com'
+          ? ('contactForm.emailError' | translate)
+          : ('contactForm.emailPlaceholder' | translate)
       "
       required
       pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
@@ -35,7 +35,7 @@
   </div>
 
   <div class="form-row border-bottom">
-    <label for="message">How can I help you?</label>
+    <label for="message">{{ "contactForm.messageLabel" | translate }}</label>
     <textarea
       #message="ngModel"
       rows="1"
@@ -44,8 +44,8 @@
       name="subject"
       [placeholder]="
         !message.valid && message.touched
-          ? 'What do you need to develop?'
-          : 'Please enter a message'
+          ? ('contactForm.messageError' | translate)
+          : ('contactForm.messagePlaceholder' | translate)
       "
       required
     ></textarea>
@@ -61,14 +61,22 @@
       required
     />
     <label for="privacyPolicy">
-      I've read the
-      <a routerLink="/imprint" target="_blank">privacy Policy</a>
-      and agree to the processing of my data as outlined.
+      {{ "contactForm.privacyPolicy1" | translate }}
+      <a routerLink="/imprint" target="_blank">{{
+        "contactForm.privacyPolicy2" | translate
+      }}</a>
+      {{ "contactForm.privacyPolicy3" | translate }}
     </label>
   </div>
   @if(!privacyPolicyChecked && formSubmitted) {
-    <span class="error"> Please accept the privacy policy. </span>
-    }
+  <span class="error">
+    {{ "contactForm.privacyPolicyError" | translate }}
+  </span>
+  }
 
-  <input class="submit-btn" type="submit" value="Say hello :)" />
+  <input
+    class="submit-btn"
+    type="submit"
+    [value]="'contactForm.privacyPolicyError' | translate"
+  />
 </form>

@@ -54,5 +54,21 @@
     "text": "Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.",
     "question2": "Need a Frontend developer?",
     "cta": "Let´s talk!"
+  },
+  "contactForm": {
+    "nameLabel": "What's your name?",
+    "namePlaceholder": "Your name goes here",
+    "nameError": "Oops! it seems your name is missing",
+    "emailLabel": "What's your email?",
+    "emailPlaceholder": "youremail@email.com",
+    "emailError": "Hoppla! your email is required",
+    "messageLabel": "How can I help you?",
+    "messagePlaceholder": "Enter a message...",
+    "messageError": "What do you need to develop?",
+    "privacyPolicy1": "I've read the",
+    "privacyPolicy2": "privacy policy",
+    "privacyPolicy3": "and agree to the processing of my data as outlined.",
+    "privacyPolicyError": "Please accept the privacy policy.",
+    "submitBtn": "Say hello :)"
   }
 }
