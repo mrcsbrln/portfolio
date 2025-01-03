@@ -17,6 +17,7 @@ export class ContactFormComponent {
 
   privacyPolicyChecked = false;
   formSubmitted = false;
+  emailSent = false;
   
   contactData: ContactData = {
     name: '',
@@ -41,7 +42,7 @@ export class ContactFormComponent {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-
+            this.emailSent = true;
             ngForm.resetForm();
           },
           error: (error) => {

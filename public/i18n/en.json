@@ -69,7 +69,8 @@
     "privacyPolicy2": "privacy policy",
     "privacyPolicy3": "and agree to the processing of my data as outlined.",
     "privacyPolicyError": "Please accept the privacy policy.",
-    "submitBtn": "Say hello :)"
+    "submitBtn": "Say hello :)",
+    "successMessage": "Your message has been successfully sent. Thank you!"
   },
   "imprint": {
     "title": "Imprint"

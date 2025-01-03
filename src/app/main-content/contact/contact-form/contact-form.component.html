@@ -73,10 +73,14 @@
     {{ "contactForm.privacyPolicyError" | translate }}
   </span>
   }
-
-  <input
+  <button
     class="submit-btn"
+    [class.form-valid]="contactForm.valid"
     type="submit"
-    [value]="'contactForm.submitBtn' | translate"
-  />
+  >
+    <span>{{ "contactForm.submitBtn" | translate }}</span>
+  </button>
 </form>
+@if(emailSent){
+<span class="success">{{ "contactForm.successMessage" | translate }}</span>
+}

@@ -101,7 +101,7 @@ form {
 }
 
 .submit-btn {
-  min-width: 50%;
+  min-width: 30%;
   margin-top: 32px;
   border: 1px solid $accent-color;
   border-radius: 100px;
@@ -110,4 +110,15 @@ form {
   color: white;
   align-self: center;
   cursor: pointer;
+  overflow: hidden;
+  &.form-valid:hover span {
+    display: inline-block;
+    @include scroll-text-animation(); // Animation anwenden
+  }
+}
+
+span.success {
+  position: absolute;
+  width: 100%;
+  margin-top: 32px;
 }
