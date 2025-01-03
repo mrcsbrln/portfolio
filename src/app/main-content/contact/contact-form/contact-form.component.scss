@@ -100,7 +100,7 @@ form {
 }
 
 .submit-btn {
-  width: 50%;
+  min-width: 50%;
   margin-top: 32px;
   border: 1px solid $accent-color;
   border-radius: 100px;
