@@ -9,7 +9,7 @@
   },
   "heroBtn": {
     "projects": "Meine Projekte",
-    "contact": "Schreib mir"
+    "contact": "Kontakt"
   },
   "marquee": {
     "item1": "Remote Arbeiten möglich",
@@ -20,15 +20,15 @@
   "aboutMe": {
     "subtitle": "Wer ich bin",
     "title": "Über mich",
-    "text": "Hi, ich bin Frontend-Entwickler(in) aus Berlin. Die unbegrenzten Möglichkeiten in der IT faszinieren mich, und ich freue mich darauf, Websites und Anwendungen zu gestalten, die sowohl ansprechend als auch benutzerfreundlich sind.",
-    "location": "Flexibel in Bezug auf Arbeitsumgebungen: Ich kann sowohl vor Ort in Berlin als auch remote effektiv arbeiten. Für einen Umzug nach München bin ich ebenfalls offen.",
+    "text": "Hi, ich bin Frontend Entwickler aus Berlin. Die unbegrenzten Möglichkeiten in der IT faszinieren mich, und ich freue mich darauf, Websites und Anwendungen zu gestalten, die sowohl ansprechend als auch benutzerfreundlich sind.",
+    "location": "Flexibel in Bezug auf Arbeitsumgebungen: Ich kann sowohl vor Ort in Berlin als auch remote oder hybrid arbeiten. Für einen Umzug nach München bin ich ebenfalls offen.",
     "mindset": "Ich bin aufgeschlossen und stets auf der Suche nach persönlichen Herausforderungen, um mein Wissen und meine Fähigkeiten kontinuierlich zu verbessern.",
     "profession": "In meinem Beruf geht es beim Programmieren nicht nur darum, Code zu schreiben – es ist eine kreative Art des Problemlösens. Ich bin stolz darauf, komplexe technische Herausforderungen in einfache, benutzerfreundliche Lösungen zu verwandeln. So helfe ich dabei, Ihre Ziele zu erreichen und Ihre Visionen zum Leben zu erwecken."
   },
   "skills": {
     "subtitle": "Technologien",
     "title": "Fähigkeiten",
-    "q1": "Du benötigst",
+    "q1": "Sie benötigen",
     "q2": "weitere Fähigkeiten?",
     "text": "Auf meinem Weg habe ich an vielfältigen Projekten gearbeitet und dabei eine Reihe von Frontend-Technologien und Konzepten eingesetzt. Ich bin offen dafür, neue Technologien und Methoden zu erlernen, um meine Fähigkeiten kontinuierlich zu verbessern und in der sich ständig wandelnden Welt der Webentwicklung stets einen Schritt voraus zu sein.",
     "ctaContact": "Zögern Sie nicht, mich zu kontaktieren. Ich freue mich darauf, mein bisheriges Wissen weiter auszubauen.",
@@ -36,7 +36,7 @@
   },
   "projects": {
     "title": "Projekte",
-    "text": "Entdecken Sie hier eine Auswahl meiner Arbeiten – interagieren Sie mit den Projekten, um meine Fähigkeiten in Aktion zu sehen."
+    "text": "Hier können Sie meine Projekte live testen und sich direkt ein Bild meiner Fähigkeiten machen."
   },
   "overlay": {
     "question": "Worum geht es in diesem Projekt?",
@@ -49,11 +49,11 @@
   },
   "contact": {
     "subtitle": "Kontaktieren Sie mich",
-    "title": "Lass uns",
-    "question1": "Hast du ein Problem zu lösen?",
-    "text": "Kontaktiere mich über dieses Formular. Ich bin daran interessiert, von dir zu hören, deine Ideen kennenzulernen und mit meiner Arbeit zu deinen Projekten beizutragen.",
-    "question2": "Brauchst du einen Frontend-Entwickler?",
-    "cta": "Lass uns reden!"
+    "title": "Dein Projekt, mein Fokus.",
+    "question1": "Haben Sie ein Problem, das gelöst werden muss?",
+    "text": "Kontaktieren Sie mich über dieses Formular. Ich freue mich darauf, von Ihnen zu hören, Ihre Ideen kennenzulernen und mit meiner Arbeit zu Ihren Projekten beizutragen.",
+    "question2": "Brauchen Sie einen Frontend Entwickler?",
+    "cta": "Wie kann ich Sie unterstützen?"
   },
   "contactForm": {
     "nameLabel": "Wie heißen Sie?",

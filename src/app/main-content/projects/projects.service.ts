@@ -11,9 +11,9 @@ export class ProjectsService {
       title: 'Join',
       stack: ['Angular', 'Typescript', 'HTML', 'CSS', 'Firebase'],
       imageUrl: '/img/join.png',
-      description: 'https://join.marcus-hartmann.net/',
+      description: '',
       gitHubUrl: 'https://github.com/KevinPerret/Join',
-      projectUrl: '',
+      projectUrl: 'https://join.marcus-hartmann.net/',
     },
     {
       id: 2,
