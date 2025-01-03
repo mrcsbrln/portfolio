@@ -2,11 +2,12 @@ import { Component, inject, signal } from '@angular/core';
 import { LanguageToggleComponent } from '../language-toggle/language-toggle.component';
 import { MobileMenuComponent } from '../mobile-menu/mobile-menu.component';
 import {TranslatePipe} from "@ngx-translate/core";
+import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [LanguageToggleComponent, MobileMenuComponent, TranslatePipe],
+  imports: [LanguageToggleComponent, MobileMenuComponent, RouterLink, RouterOutlet, TranslatePipe],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
 })
