@@ -1,34 +1,40 @@
-<span>Portfolio</span>
-<h2>{{'projects.title' | translate}}</h2>
-<p>{{'projects.text' | translate}}</p>
-<ul>
-  @for (project of projects; track project.id; let isLast = $last) {
-  <li>
-    <div
-      class="left-wrapper"
-      (click)="openOverlay(project)"
-      [ngClass]="{ 'border-bottom': isLast }"
-    >
-      <div class="left">
-        {{ project.title }}
-        <div class="arrow">
-          <img src="/img/arrow-up.svg" alt="" />
+<div class="wrapper">
+  <span>Portfolio</span>
+  <h2>{{ "projects.title" | translate }}</h2>
+  <p>{{ "projects.text" | translate }}</p>
+  <ul>
+    @for (project of projects; track project.id; let isLast = $last) {
+    <li>
+      <div
+        class="left-wrapper"
+        (click)="openOverlay(project)"
+        [ngClass]="{ 'border-bottom': isLast }"
+      >
+        <div class="left">
+          {{ project.title }}
+          <div class="arrow">
+            <img src="/img/arrow-up.svg" alt="" />
+          </div>
+        </div>
+        <div class="right">{{ project.stack.join(" | ") }}</div>
+      </div>
+      <div class="right-wrapper">
+        <div class="img-div">
+          <img
+            class="screenshot"
+            [src]="project.imageUrl"
+            [alt]="project.title"
+          />
         </div>
       </div>
-      <div class="right">{{ project.stack.join(" | ") }}</div>
-    </div>
-    <div class="right-wrapper">
-      <div class="img-div">
-        <img
-          class="screenshot"
-          [src]="project.imageUrl"
-          [alt]="project.title"
-        />
-      </div>
-    </div>
-  </li>
+    </li>
+    }
+  </ul>
+  @if(overlayVisible()){
+  <app-overlay
+    [project]="selectedProject()"
+    [projects]="projects"
+    (close)="closeOverlay()"
+  />
   }
-</ul>
-@if(overlayVisible()){
-<app-overlay [project]="selectedProject()" [projects]="projects" (close)="closeOverlay()" />
-}
+</div>

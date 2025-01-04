@@ -4,13 +4,6 @@
     position: absolute;
     top: 0;
     width: 100%;
-    padding: 16px;
-    @include respond-to('sm') {
-        padding: 32px 64px;
-    }
-    @include respond-to('md') {
-        padding: 32px 128px;
-    }
     background: linear-gradient(180deg, black 0%, transparent 60%);
 }
 
@@ -33,6 +26,16 @@ img {
 nav{
     @include dFlex($jc: space-between,$g: 16px);
     @include max-width;
+    padding: 16px;
+    @include respond-to('sm') {
+        padding: 32px 64px;
+    }
+    @include respond-to('md') {
+        padding: 32px 128px;
+    }
+    @include respond-to('md') {
+        padding: 32px 0;
+    }
 }
 
 .burger-menu {

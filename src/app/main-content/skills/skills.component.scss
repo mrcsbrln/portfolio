@@ -3,13 +3,7 @@
 :host {
     background: radial-gradient(circle at 0% 50%, $background-color-secondary -20%, $background-color-primary 20%);
     @include dFlex($fd: column, $g: 64px);
-    padding: 16px;
-    @include respond-to('sm') {
-        padding: 32px 64px;
-    }
-    @include respond-to('md') {
-        padding: 32px 128px;
-    }
+    min-width: 100vw;
 }
 
 h2 {
@@ -26,6 +20,20 @@ h3 {
 
 .skills-wrapper {
     @include dFlex($fd: column, $ai:flex-start, $g: 16px);
+    @include max-width;
+    padding: 16px;
+    @include respond-to('sm') {
+        padding: 32px 64px;
+    }
+    @include respond-to('md') {
+        padding: 64px 128px;
+    }
+    @include respond-to('xl') {
+        padding: 128px;
+    }
+    @include respond-to('xxl') {
+        padding: 128px 0;
+    }
     span:first-of-type {
         color: $accent-color;
         font-size: 24px;
@@ -46,7 +54,6 @@ h3 {
     backdrop-filter: blur(10px);
     background-color: rgba(255, 255, 255, 0.05);
     padding: 32px;
-    flex: 1;
     border-radius: 30px;
     border: 1px solid white;
 }
@@ -54,7 +61,6 @@ h3 {
 .tech-icons {
     @include dFlex($jc: flex-start, $g: 32px);
     flex-wrap: wrap;
-    flex: 1.25;
 }
 
 .tech-icon {

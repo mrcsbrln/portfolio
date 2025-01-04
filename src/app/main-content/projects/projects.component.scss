@@ -2,14 +2,8 @@
 
 :host {
   background-color: $background-color-primary;
-  @include dFlex($fd: column, $ai: flex-start, $jc: flex-start, $g: 32px);
-  padding: 16px;
-  @include respond-to('sm') {
-      padding: 32px 64px;
-  }
-  @include respond-to('md') {
-      padding: 32px 128px;
-  }
+  @include dFlex($jc: flex-start);
+  min-width: 100vw;
 }
 
 h2 {
@@ -71,7 +65,7 @@ li {
 .left-wrapper {
   border-top: 1px solid $accent-color;
   padding: 40px 0;
-  @include respond-to('lg') {
+  @include respond-to("lg") {
     padding: 40px 32px;
   }
   @include dFlex($fd: column, $ai: flex-start, $g: 8px);
@@ -111,4 +105,35 @@ li {
   bottom: 16px;
   width: 200px;
   display: none;
+}
+
+// .wrapper {
+//   @include dFlex($fd: column, $ai: flex-start, $jc: flex-start, $g: 32px);
+//   @include max-width;
+//   width: 100%;
+//   padding: 16px;
+//   @include respond-to("sm") {
+//     padding: 64px 32px;
+//   }
+//   @include respond-to("md") {
+//     padding: 32px 128px;
+//   }
+//   @include respond-to("xl") {
+//     padding: 64px 128px;
+//   }
+//   @include respond-to("xxl") {
+//     padding: 64px 0;
+//   }
+// }
+
+.wrapper {
+  @include dFlex($fd: column, $ai: flex-start, $jc: flex-start, $g: 32px);
+  @include max-width;
+  width: 100%;
+
+  @each $breakpoint, $padding in $padding-values {
+    @include respond-to($breakpoint) {
+      padding: $padding;
+    }
+  }
 }

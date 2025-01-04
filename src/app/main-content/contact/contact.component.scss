@@ -1,16 +1,41 @@
 @import '../../../styles.scss';
 
 :host {
+    display: flex;
+    background-color: $background-color-primary;
+}
+
+h2 {
+    color: $accent-color;
+    font-weight: 500;
+}
+
+.contact-text {
+    @include dFlex($fd: column, $ai: flex-start, $g: 16px);
+    width: 100%;
+    @include respond-to('lg') {
+        width: 50%;
+    }
+}
+
+.wrapper {
     @include dFlex($fd: column, $jc: space-between, $ai: flex-start, $g: 64px);
+    @include max-width;
     width: 100%;
     padding: 64px 16px;
     @include respond-to('sm') {
-        padding: 64px;
+        padding: 64px 32px;
     }
     @include respond-to('md') {
+        padding: 64px;
+    }
+    @include respond-to('lg') {
+        flex-direction: row;
         padding: 64px 128px;
     }
-    background-color: $background-color-primary;
+    @include respond-to('xxl') {
+        padding: 64px 0;
+    }
     span:first-of-type {
         font-family: 'Fira-Code';
         font-size: 64px;
@@ -29,22 +54,5 @@
             font-size: 16px;
             font-weight: 700;
         }
-    }
-    @include respond-to('lg') {
-        flex-direction: row;
-        padding: 64px 128px;
-    }
-}
-
-h2 {
-    color: $accent-color;
-    font-weight: 500;
-}
-
-.contact-text {
-    @include dFlex($fd: column, $ai: flex-start, $g: 16px);
-    width: 100%;
-    @include respond-to('lg') {
-        width: 50%;
     }
 }
