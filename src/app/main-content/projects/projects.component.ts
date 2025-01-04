@@ -4,6 +4,8 @@ import { OverlayComponent } from '../overlay/overlay.component';
 import { ProjectsService } from './projects.service';
 import { CommonModule } from '@angular/common';
 import { TranslatePipe } from '@ngx-translate/core';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 @Component({
   selector: 'app-projects',
@@ -18,6 +20,10 @@ export class ProjectsComponent {
 
   overlayVisible = signal(false);
   selectedProject = signal<Project | null>(null);
+
+  ngOnInit() {
+    AOS.init();
+  }
 
   openOverlay(project: Project) {
     this.selectedProject.set(project);

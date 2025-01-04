@@ -4,7 +4,7 @@
   <p>{{ "projects.text" | translate }}</p>
   <ul>
     @for (project of projects; track project.id; let isLast = $last) {
-    <li>
+    <li data-aos="fade-up" [attr.data-aos-delay]="$index * 150">
       <div
         class="left-wrapper"
         (click)="openOverlay(project)"

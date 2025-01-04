@@ -1,8 +1,16 @@
 <div class="wrapper">
-  <div class="portrait-div">
-    <img class="portrait" src="/img/mh.jpg" alt="" />
+  <div
+    class="portrait-div"
+    data-aos="fade-up-right"
+    data-aos-duration="1000"
+  >
+    <img class="portrait" src="/img/mh.jpg" />
   </div>
-  <div class="about-me-wrapper">
+  <div
+    class="about-me-wrapper"
+    data-aos="fade-up-left"
+    data-aos-duration="1000"
+  >
     <span>{{ "aboutMe.subtitle" | translate }}</span>
     <div class="about-me">
       <h2>{{ "aboutMe.title" | translate }}</h2>
@@ -17,9 +25,8 @@
       </div>
       <div class="icon-list">
         <img class="icon" src="/img/check-framed.svg" alt="" />
-        <p> {{'aboutMe.profession' | translate}} </p>
+        <p>{{ "aboutMe.profession" | translate }}</p>
       </div>
     </div>
   </div>
 </div>
-
