@@ -3,6 +3,8 @@ import { NavbarComponent } from '../../shared/navbar/navbar.component';
 import { ButtonComponent } from '../../shared/button/button.component';
 import { MarqueeComponent } from '../../shared/marquee/marquee.component';
 import { TranslatePipe } from '@ngx-translate/core';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 @Component({
   selector: 'app-hero',
@@ -16,6 +18,10 @@ export class HeroComponent {
   emailIcon = '/img/email.svg';
   githubIcon = '/img/github1.svg';
   linkedInIcon = '/img/linkedin1.svg';
+
+  ngOnInit() {
+    AOS.init();
+  }
 
   onMouseOver(icon: string): void {
     if (icon === 'github') {

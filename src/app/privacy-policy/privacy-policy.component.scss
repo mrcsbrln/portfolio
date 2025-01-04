@@ -1,0 +1,24 @@
+@import '../../styles.scss';
+
+:host {
+    @include dFlex($fd: column);
+    background-color: $background-color-primary;
+    width: 100%;
+    min-height: 100%;
+    flex-grow: 1;
+    @include respond-to-landscape {
+        min-height: 150vh;
+      }
+}
+
+.privacy-policy {
+    @include dFlex($fd: column, $ai: flex-start, $g: 16px);
+    @include max-width;
+    @each $breakpoint, $padding in $padding-values {
+        @include respond-to($breakpoint) {
+          padding: $padding;
+        }
+      }
+    min-height: 100%;
+    margin-top: 128px;
+}

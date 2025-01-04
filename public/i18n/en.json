@@ -74,6 +74,71 @@
     "successMessage": "Your message has been successfully sent. Thank you!"
   },
   "imprint": {
-    "title": "Imprint"
+    "title": "Imprint",
+    "contact": "Contact"
+  },
+  "privacyPolicy": {
+    "title": "Privacy Policy",
+    "section1": {
+      "title": "1. Data Protection at a Glance",
+      "generalInfo": {
+        "title": "General Information",
+        "content": "The following notes provide a simple overview of what happens to your personal data when you visit this website. Personal data is any data with which you can be personally identified. Detailed information on data protection can be found in our privacy policy listed below this text."
+      },
+      "dataCollection": {
+        "title": "Data Collection on This Website",
+        "responsible": {
+          "title": "Who is responsible for data collection on this website?",
+          "content": "The data processing on this website is carried out by the website operator. Their contact details can be found in the section 'Notice about the Responsible Party' in this privacy policy."
+        },
+        "howWeCollect": {
+          "title": "How do we collect your data?",
+          "content1": "Your data is collected, on the one hand, when you provide it to us. This can, for example, be data you enter into a contact form.",
+          "content2": "Other data is collected automatically or after your consent when you visit the website by our IT systems. These are mainly technical data (e.g., internet browser, operating system, or time of the page visit). The collection of this data occurs automatically as soon as you enter this website."
+        },
+        "usage": {
+          "title": "What do we use your data for?",
+          "content": "Part of the data is collected to ensure the website is provided error-free. Other data can be used to analyze your user behavior."
+        },
+        "rights": {
+          "title": "What rights do you have regarding your data?",
+          "content": "You have the right to obtain information about the origin, recipient, and purpose of your stored personal data free of charge at any time. You also have the right to request the correction or deletion of this data. If you have given consent to data processing, you can revoke this consent at any time for the future. Furthermore, you have the right to request the restriction of the processing of your personal data under certain circumstances. Additionally, you have the right to file a complaint with the responsible supervisory authority. For this and further questions about data protection, you can contact us at any time."
+        }
+      }
+    },
+    "section2": {
+      "title": "2. Hosting",
+      "hostingProvider": {
+        "title": "All-Inkl",
+        "content1": "The provider is ALL-INKL.COM - Neue Medien Münnich, Inh. René Münnich, Hauptstraße 68, 02742 Friedersdorf (hereinafter referred to as All-Inkl). Details can be found in All-Inkl's privacy policy:",
+        "content2": "The use of All-Inkl is based on Art. 6 Para. 1 lit. f GDPR. We have a legitimate interest in a reliable presentation of our website. If consent has been requested, processing will only take place on the basis of Art. 6 Para. 1 lit. a GDPR and Section 25 Para. 1 TDDG. Consent can be revoked at any time."
+      }
+    },
+    "section3": {
+      "title": "3. General Notes and Mandatory Information",
+      "dataProtection": {
+        "title": "Data Protection",
+        "content": "The operators of these pages take the protection of your personal data very seriously. We treat your personal data confidentially and in accordance with statutory data protection regulations as well as this privacy policy."
+      },
+      "responsibleParty": {
+        "title": "Notice about the Responsible Party",
+        "content": "The responsible party for data processing on this website is: Marcus Hartmann, Liegnitzer Str. 16, 10999 Berlin. Phone: +4915140306800, Email: info(at)marcus-hartmann.net"
+      },
+      "storageDuration": {
+        "title": "Storage Duration",
+        "content": "Unless a more specific storage period has been stated within this privacy policy, your personal data will remain with us until the purpose for data processing no longer applies. If you assert a legitimate request for deletion or revoke your consent for data processing, your data will be deleted."
+      },
+      "legalBasis": {
+        "title": "General Information on Legal Bases for Data Processing",
+        "content": "Processing is carried out according to Art. 6 GDPR (various legal bases, depending on the case). For more details, please refer to the complete privacy policy."
+      }
+    },
+    "section4": {
+      "title": "4. Plugins and Tools",
+      "googleFonts": {
+        "title": "Google Fonts (Local Hosting)",
+        "content": "This site uses so-called Google Fonts, provided by Google, for the uniform representation of fonts. The Google Fonts are locally installed. A connection to Google servers does not take place."
+      }
+    }
   }
 }
