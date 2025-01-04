@@ -32,6 +32,11 @@
       required
       pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
     />
+    @if(formSubmitted && email.errors?.['pattern']) {
+      <div class="error">
+        {{ "contactForm.emailInvalid" | translate }}
+      </div>
+    }
   </div>
 
   <div class="form-row border-bottom">

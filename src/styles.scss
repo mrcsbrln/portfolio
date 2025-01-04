@@ -16,9 +16,9 @@ $breakpoints: (
 $padding-values: (
   "xs": 64px 16px,
   "sm": 64px 32px,
-  "md": 32px 128px,
+  "md": 32px 64px,
   "xl": 64px 128px,
-  "xxl": 64px 0
+  "xxl": 128px 0
 );
 
 @font-face {

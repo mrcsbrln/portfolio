@@ -62,6 +62,7 @@
     "emailLabel": "What's your email?",
     "emailPlaceholder": "youremail@email.com",
     "emailError": "Hoppla! your email is required",
+    "emailInvalid": "Please enter a valid email format.",
     "messageLabel": "How can I help you?",
     "messagePlaceholder": "Enter a message...",
     "messageError": "What do you need to develop?",

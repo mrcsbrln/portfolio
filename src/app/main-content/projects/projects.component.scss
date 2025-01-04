@@ -130,7 +130,6 @@ li {
   @include dFlex($fd: column, $ai: flex-start, $jc: flex-start, $g: 32px);
   @include max-width;
   width: 100%;
-
   @each $breakpoint, $padding in $padding-values {
     @include respond-to($breakpoint) {
       padding: $padding;

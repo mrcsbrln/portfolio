@@ -19,7 +19,7 @@
     color: $accent-color;
     font-family: "Fira-Code";
     font-size: 18px;
-    @include respond-to('lg') {
+    @include respond-to("lg") {
       display: inline;
     }
   }
@@ -27,33 +27,28 @@
 
 .right-div {
   ul {
-    @include dFlex($fd: column, $ai:flex-start, $g: 8px);
+    @include dFlex($fd: column, $ai: flex-start, $g: 8px);
     list-style: none;
     li {
-        a{
+      a {
         color: white;
         text-decoration: none;
         @include transition-all;
         &:hover {
-            color: $accent-color;
+          color: $accent-color;
         }
-        }
+      }
     }
   }
 }
 
-.wrapper{
+.wrapper {
   @include dFlex($jc: space-between);
   @include max-width;
   width: 100%;
-  padding: 16px;
-  @include respond-to('sm') {
-      padding: 32px 64px;
+  @each $breakpoint, $padding in $padding-values {
+    @include respond-to($breakpoint) {
+      padding: $padding;
+    }
   }
-  @include respond-to('md') {
-      padding: 32px 128px;
-  }
-  @include respond-to('xxl') {
-    padding: 32px 0;
-}
 }

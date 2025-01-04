@@ -62,6 +62,7 @@
     "emailLabel": "Wie lautet Ihre E-Mail?",
     "emailPlaceholder": "ihreemail@email.com",
     "emailError": "Hoppla! Ihre E-Mail-Adresse wird benötigt.",
+    "emailInvalid": "Bitte geben Sie gültige Email ein.",
     "messageLabel": "Wie kann ich Ihnen helfen?",
     "messagePlaceholder": "Geben Sie eine Nachricht ein...",
     "messageError": "Was möchten Sie entwickeln?",
