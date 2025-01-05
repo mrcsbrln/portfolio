@@ -85,11 +85,10 @@
               }
             ],
             "styles": [
-              "src/styles.scss",
-              "https://unpkg.com/aos@next/dist/aos.css"
+              "src/styles.scss"
             ],
             "scripts": [
-              "https://unpkg.com/aos@next/dist/aos.js"
+
             ]
           }
         }

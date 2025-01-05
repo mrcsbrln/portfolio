@@ -1,4 +1,5 @@
 import { Component, effect, inject } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { MainContentComponent } from './main-content/main-content.component';
 import { FooterComponent } from './shared/footer/footer.component';
@@ -11,6 +12,7 @@ import translationsDE from '../../public/i18n/de.json';
   selector: 'app-root',
   standalone: true,
   imports: [
+    CommonModule,
     RouterLink,
     RouterOutlet,
     MainContentComponent,

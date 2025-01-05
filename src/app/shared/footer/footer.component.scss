@@ -46,14 +46,14 @@
   @include dFlex($jc: space-between);
   @include max-width;
   width: 100%;
-  padding: 32px 16px;
-  @include respond-to('sm') {
-      padding: 32px;
-  }
-  @include respond-to('md') {
-      padding: 32px 64px;
-  }
-  @include respond-to('xxl') {
-      padding: 32px 0;
-  }
+    padding: 32px 16px;
+    @include respond-to('sm') {
+        padding: 32px;
+    }
+    @include respond-to('md') {
+        padding: 32px 64px;
+    }
+    @include respond-to('xxl') {
+        padding: 32px 0;
+    }
 }

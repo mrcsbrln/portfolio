@@ -3,7 +3,6 @@ import { NavbarComponent } from '../../shared/navbar/navbar.component';
 import { ButtonComponent } from '../../shared/button/button.component';
 import { MarqueeComponent } from '../../shared/marquee/marquee.component';
 import { TranslatePipe } from '@ngx-translate/core';
-declare const AOS: any;
 
 @Component({
   selector: 'app-hero',
@@ -12,15 +11,11 @@ declare const AOS: any;
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.scss',
 })
-export class HeroComponent implements OnInit {
+export class HeroComponent {
   email = 'info@marcus-hartmann.net';
   emailIcon = '/img/email.svg';
   githubIcon = '/img/github1.svg';
   linkedInIcon = '/img/linkedin1.svg';
-
-  ngOnInit(): void {
-    AOS.init();
-  }
 
   onMouseOver(icon: string): void {
     if (icon === 'github') {
