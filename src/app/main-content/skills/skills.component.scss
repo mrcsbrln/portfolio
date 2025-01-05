@@ -1,9 +1,9 @@
 @import '../../../styles.scss';
 
 :host {
-    background: radial-gradient(circle at 0% 50%, $background-color-secondary -20%, $background-color-primary 20%);
+    background: radial-gradient(circle at 0% 50%, $background-color-secondary -10%, $background-color-primary 10%);
     @include dFlex($fd: column, $g: 64px);
-    min-width: 100vw;
+    width: 100vw;
     overflow: hidden;
 }
 

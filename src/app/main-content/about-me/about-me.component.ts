@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslatePipe } from '@ngx-translate/core';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+declare const AOS: any;
 
 @Component({
   selector: 'app-about-me',
@@ -10,8 +9,8 @@ import 'aos/dist/aos.css';
   templateUrl: './about-me.component.html',
   styleUrl: './about-me.component.scss'
 })
-export class AboutMeComponent {
-  ngOnInit() {
+export class AboutMeComponent implements OnInit {
+  ngOnInit(): void {
     AOS.init();
   }
 }

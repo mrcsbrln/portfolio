@@ -5,9 +5,8 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { TranslateService } from '@ngx-translate/core';
 import { LanguageToggleService } from './shared/language-toggle/language-toogle.service';
-import translationsEN from '../../public/i18n/en.json'
+import translationsEN from '../../public/i18n/en.json';
 import translationsDE from '../../public/i18n/de.json';
-
 @Component({
   selector: 'app-root',
   standalone: true,

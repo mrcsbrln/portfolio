@@ -4,7 +4,7 @@
     position: absolute;
     top: 0;
     width: 100%;
-    background: linear-gradient(180deg, black 0%, transparent 60%);
+    background: linear-gradient(180deg, black -90%, transparent 100%);
 }
 
 a {
@@ -26,11 +26,21 @@ img {
 nav{
     @include dFlex($jc: space-between,$g: 16px);
     @include max-width;
-    @each $breakpoint, $padding in $padding-values {
-        @include respond-to($breakpoint) {
-          padding: $padding;
-        }
-      }
+    // @each $breakpoint, $padding in $padding-values {
+    //     @include respond-to($breakpoint) {
+    //       padding: $padding;
+    //     }
+    //   }
+    padding: 32px 16px;
+    @include respond-to('sm') {
+        padding: 32px;
+    }
+    @include respond-to('md') {
+        padding: 32px 64px;
+    }
+    @include respond-to('xxl') {
+        padding: 32px 0;
+    }
 }
 
 .burger-menu {

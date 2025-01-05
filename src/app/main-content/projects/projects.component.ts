@@ -1,12 +1,10 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component, inject, OnInit, signal } from '@angular/core';
 import { Project } from '../../interfaces/project.interface';
 import { OverlayComponent } from '../overlay/overlay.component';
 import { ProjectsService } from './projects.service';
 import { CommonModule } from '@angular/common';
 import { TranslatePipe } from '@ngx-translate/core';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-
+declare const AOS: any;
 @Component({
   selector: 'app-projects',
   standalone: true,
@@ -14,14 +12,14 @@ import 'aos/dist/aos.css';
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss',
 })
-export class ProjectsComponent {
+export class ProjectsComponent implements OnInit {
   private projectsService = inject(ProjectsService);
   projects = this.projectsService.getProjects();
 
   overlayVisible = signal(false);
   selectedProject = signal<Project | null>(null);
 
-  ngOnInit() {
+  ngOnInit(): void {
     AOS.init();
   }
 
