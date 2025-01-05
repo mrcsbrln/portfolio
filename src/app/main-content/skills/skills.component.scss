@@ -4,6 +4,7 @@
     background: radial-gradient(circle at 0% 50%, $background-color-secondary -20%, $background-color-primary 20%);
     @include dFlex($fd: column, $g: 64px);
     min-width: 100vw;
+    overflow: hidden;
 }
 
 h2 {

@@ -12,6 +12,7 @@
   );
   color: $text-color-primary;
   @include dFlex($fd: column);
+  overflow: hidden;
 }
 
 h1 {
