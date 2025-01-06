@@ -6,11 +6,11 @@
     <app-button label="{{ 'heroBtn.contact' | translate }}" targetId="contact" />
   </div>
 </div>
-<div class="left-seperator-div" data-aos="flip-left" data-aos-duration="2000">
-  <div class="scroll-down" data-aos="flip-left" data-aos-duration="2000"><span>&#8595;</span></div>
-  <div class="vertical-seperator" data-aos="fade-up" data-aos-duration="2000"></div>
+<div class="left-seperator-div">
+  <div class="scroll-down"><span>&#8595;</span></div>
+  <div class="vertical-seperator"></div>
 </div>
-<div class="right-seperator-div" data-aos="flip-right" data-aos-duration="2000">
+<div class="right-seperator-div">
   <a class="email" [href]="'mailto:' + email">{{ email }}</a>
   <a [href]="'mailto:' + email">
     <img
@@ -44,6 +44,6 @@
     />
   </a>
 
-  <div class="vertical-seperator" data-aos="fade-up" data-aos-duration="2000"></div>
+  <div class="vertical-seperator"></div>
 </div>
 <app-marquee />

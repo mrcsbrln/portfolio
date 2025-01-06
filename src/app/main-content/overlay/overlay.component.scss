@@ -4,11 +4,11 @@
   background-color: rgba(0, 0, 0, 0.5);
   @include dFlex();
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 0;
+  left: 0;
+  padding: 16px;
 }
 
 h2 {
@@ -53,21 +53,21 @@ h2 {
 }
 
 .cancel {
-  position: relative;
+  @include dFlex();
+  width: 24px;
   height: 50px;
-  align-self: flex-end;
-  @include dFlex($jc: center);
-  cursor: pointer;
-  @include respond-to("lg") {
-    position: absolute;
-    top: 32px;
-    right: 32px;
-    width: 100px;
+  img {
+    cursor: pointer;
   }
 }
 
+.cancel-wrapper {
+  @include dFlex($jc: flex-end);
+  width: 100%;
+}
+
 .main-div {
-  @include dFlex($fd: column-reverse, $jc: space-between, $g: 32px);
+  @include dFlex($fd: column-reverse, $jc: space-between, $g: 64px);
   width: 100%;
   @include respond-to("lg") {
     flex-direction: row;
@@ -75,7 +75,7 @@ h2 {
 }
 
 .overlay {
-  position: fixed;
+  position: relative;
   border-radius: 32px;
   border: 1px solid $accent-color;
   background: linear-gradient(
@@ -85,11 +85,21 @@ h2 {
   );
   padding: 16px;
   z-index: 1000;
-  overflow-y: auto;
   @include dFlex($fd: column, $jc: flex-start, $g: 16px);
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  max-width: 1440px;
+  max-height: 90%;
+  overflow-y: scroll;
+  @include respond-to("sm") {
+    width: 90%;
+    padding: 32px;
+    justify-content: center;
+  }
+  @include respond-to("xl") {
+    padding: 64px;
+  }
   button {
+    margin-bottom: 16px;
     background: none;
     border: none;
     color: $accent-color;
@@ -108,13 +118,6 @@ h2 {
         transform: translateX(8px);
       }
     }
-  }
-  @include respond-to("xl") {
-    padding: 64px;
-  }
-  @include respond-to("sm") {
-    padding: 32px;
-    justify-content: center;
   }
 }
 
@@ -149,8 +152,7 @@ h2 {
     width: 50%;
   }
   img {
-    max-width: 100%;
-    max-height: 30vh;
+    width: 100%;
     object-fit: cover;
     border-radius: 16px;
     @include respond-to("lg") {

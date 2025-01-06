@@ -8,7 +8,6 @@
   );
   @include dFlex($fd: column, $g: 64px);
   width: 100vw;
-  overflow: hidden;
 }
 
 h2 {

@@ -1,10 +1,12 @@
 <div class="overlay">
-  <div class="cancel" (click)="emitCloseEvent()">
-    <img
-      [src]="cancelIconPath"
-      (mouseover)="onMouseOver('cancel-icon')"
-      (mouseleave)="onMouseLeave('cancel-icon')"
-    />
+  <div class="cancel-wrapper">
+    <div class="cancel" (click)="emitCloseEvent()">
+      <img
+        [src]="cancelIconPath"
+        (mouseover)="onMouseOver('cancel-icon')"
+        (mouseleave)="onMouseLeave('cancel-icon')"
+      />
+    </div>
   </div>
   <div class="main-div">
     <div class="project-info">

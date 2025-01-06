@@ -4,7 +4,6 @@
   background-color: $background-color-primary;
   @include dFlex($jc: flex-start);
   width: 100vw;
-  overflow: hidden;
 }
 
 h2 {
