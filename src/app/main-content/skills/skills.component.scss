@@ -58,7 +58,7 @@ h3 {
 
 .speech-bubble {
   position: absolute;
-  bottom: 120%; /* Platz über dem Icon */
+  bottom: 120%;
   left: 50%;
   transform: translateX(-50%) scale(0.95);
   background: #fff;
@@ -68,7 +68,6 @@ h3 {
   width: fit-content;
   max-width: 300px;
   font-size: 16px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   @include dFlex($g: 16px);
   visibility: hidden;
   opacity: 0;
