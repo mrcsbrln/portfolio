@@ -31,7 +31,7 @@ h3 {
       padding: $padding;
     }
   }
-  span:first-of-type {
+  > span:first-of-type {
     color: $accent-color;
     font-size: 24px;
     font-weight: 500;
@@ -60,7 +60,7 @@ h3 {
 .tech-icons {
   @include dFlex($jc: flex-start, $g: 32px);
   flex-wrap: wrap;
-  @include scroll-animation(right);
+    @include scroll-animation(right);
 }
 
 .tech-icon {
