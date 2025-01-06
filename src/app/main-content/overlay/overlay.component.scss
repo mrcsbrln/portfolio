@@ -1,13 +1,13 @@
 @import "../../../styles.scss";
 
 :host {
-  background-color: rgba(0, 0, 0, 0.5);
-  @include dFlex();
-  width: 100%;
-  min-height: 100%;
   position: fixed;
   top: 0;
   left: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  @include dFlex();
+  width: 100%;
+  min-height: 100%;
   padding: 16px;
 }
 
@@ -75,7 +75,7 @@ h2 {
 }
 
 .overlay {
-  position: relative;
+  position: absolute;
   border-radius: 32px;
   border: 1px solid $accent-color;
   background: linear-gradient(
@@ -86,14 +86,13 @@ h2 {
   padding: 16px;
   z-index: 1000;
   @include dFlex($fd: column, $jc: flex-start, $g: 16px);
-  width: 100%;
+  width: 90%;
   max-width: 1440px;
   max-height: 90%;
-  overflow-y: scroll;
+  overflow-y: auto;
   @include respond-to("sm") {
     width: 90%;
     padding: 32px;
-    justify-content: center;
   }
   @include respond-to("xl") {
     padding: 64px;
@@ -157,6 +156,9 @@ h2 {
     border-radius: 16px;
     @include respond-to("lg") {
       height: 100%;
+    }
+    @include respond-to-landscape {
+      max-width: 250px;
     }
   }
 }
