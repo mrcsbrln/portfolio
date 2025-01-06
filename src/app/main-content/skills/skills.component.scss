@@ -57,13 +57,55 @@ h3 {
   border: 1px solid white;
 }
 
+.speech-bubble {
+  position: absolute;
+  bottom: 120%; /* Platz über dem Icon */
+  left: 50%;
+  transform: translateX(-50%) scale(0.95);
+  background: #fff;
+  color: #333;
+  padding: 10px 20px;
+  border-radius: 10px;
+  width: fit-content;
+  max-width: 300px;
+  font-size: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  @include dFlex($g: 16px);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.6s ease, transform 0.6s ease, visibility 0s 0.6s;
+}
+
+.speech-bubble::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 10px;
+  border-style: solid;
+  border-color: #fff transparent transparent transparent;
+}
+
+.tech-icon:hover .speech-bubble {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.stack-bubble {
+    @include dFlex($fd: column);
+}
+
 .tech-icons {
   @include dFlex($jc: flex-start, $g: 32px);
   flex-wrap: wrap;
-    @include scroll-animation(right);
+  @include scroll-animation(right);
 }
 
 .tech-icon {
+  position: relative;
   @include dFlex($fd: column, $g: 8px);
   width: 128px;
   font-family: "fira-Code";

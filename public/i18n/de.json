@@ -20,8 +20,8 @@
   "aboutMe": {
     "subtitle": "Wer ich bin",
     "title": "Über mich",
-    "text": "Hi, ich bin Frontend Entwickler aus Berlin. Die unbegrenzten Möglichkeiten in der IT faszinieren mich, und ich freue mich darauf, Websites und Anwendungen zu gestalten, die sowohl ansprechend als auch benutzerfreundlich sind.",
-    "location": "Flexibel in Bezug auf Arbeitsumgebungen: Ich kann sowohl vor Ort in Berlin als auch remote oder hybrid arbeiten. Für einen Umzug nach München bin ich ebenfalls offen.",
+    "text": "Hi, ich bin Frontend Entwickler aus Berlin. Die unbegrenzten Möglichkeiten in der IT faszinieren mich, und ich freue mich darauf, Websites und Webanwendungen zu gestalten, die sowohl ansprechend als auch benutzerfreundlich sind.",
+    "location": "Flexibel in Bezug auf Arbeitsumgebungen: Ich kann sowohl vor Ort in Berlin als auch remote oder hybrid arbeiten. Für einen Umzug nach München und Umgebung bin ich ebenfalls offen.",
     "mindset": "Ich bin aufgeschlossen und stets auf der Suche nach persönlichen Herausforderungen, um mein Wissen und meine Fähigkeiten kontinuierlich zu verbessern.",
     "profession": "In meinem Beruf geht es beim Programmieren nicht nur darum, Code zu schreiben – es ist eine kreative Art des Problemlösens. Ich bin stolz darauf, komplexe technische Herausforderungen in einfache, benutzerfreundliche Lösungen zu verwandeln. So helfe ich dabei, Ihre Ziele zu erreichen und Ihre Visionen zum Leben zu erwecken."
   },
@@ -31,7 +31,7 @@
     "q1": "Sie benötigen",
     "q2": "weitere Fähigkeiten?",
     "text": "Auf meinem Weg habe ich an vielfältigen Projekten gearbeitet und dabei eine Reihe von Frontend-Technologien und Konzepten eingesetzt. Ich bin offen dafür, neue Technologien und Methoden zu erlernen, um meine Fähigkeiten kontinuierlich zu verbessern und in der sich ständig wandelnden Welt der Webentwicklung stets einen Schritt voraus zu sein.",
-    "ctaContact": "Zögern Sie nicht, mich zu kontaktieren. Ich freue mich darauf, mein bisheriges Wissen weiter auszubauen.",
+    "ctaContact": "Zögern Sie nicht, mich zu kontaktieren. Ich freue mich darauf, meine bisherigen Kenntnisse weiter zu vertiefen und meine Fähigkeiten im Bereich der Backend-Entwicklung auszubauen.",
     "ctaBtn": "Kontaktieren Sie mich"
   },
   "projects": {
