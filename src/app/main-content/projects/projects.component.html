@@ -4,7 +4,7 @@
   <p>{{ "projects.text" | translate }}</p>
   <ul>
     @for (project of projects; track project.id; let isLast = $last) {
-    <li>
+    <li appScrollAnimate [animationClass]="'animate-on-scroll'">
       <div
         class="left-wrapper"
         (click)="openOverlay(project)"

@@ -17,7 +17,7 @@ $padding-values: (
   "xs": 64px 16px,
   "sm": 64px 32px,
   "md": 64px,
-  "xxl": 64px 0
+  "xxl": 64px 0,
 );
 
 @font-face {
@@ -57,8 +57,31 @@ $padding-values: (
   transition: all 125ms ease;
 }
 
-@mixin scroll-text-animation($duration: 2s, $iteration: infinite, $timing: linear) {
+@mixin scroll-text-animation(
+  $duration: 2s,
+  $iteration: infinite,
+  $timing: linear
+) {
   animation: scroll-text $duration $iteration $timing;
+}
+
+@mixin scroll-animation($direction: left, $distance: 50px, $duration: 0.6s) {
+  opacity: 0;
+
+  @if $direction == left {
+    transform: translateX(-1 * $distance);
+  } @else if $direction == right {
+    transform: translateX($distance);
+  } @else if $direction == bottom {
+    transform: translateY($distance);
+  }
+
+  transition: opacity $duration ease-out, transform $duration ease-out;
+
+  &.animate-on-scroll {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+  }
 }
 
 @mixin respond-to($breakpoint) {
@@ -104,5 +127,3 @@ body {
 .no-scroll {
   overflow: hidden;
 }
-
-

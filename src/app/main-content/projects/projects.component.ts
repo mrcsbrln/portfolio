@@ -4,10 +4,11 @@ import { OverlayComponent } from '../overlay/overlay.component';
 import { ProjectsService } from './projects.service';
 import { CommonModule } from '@angular/common';
 import { TranslatePipe } from '@ngx-translate/core';
+import { ScrollAnimateDirective } from '../../directives/scroll-animate.directive';
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [CommonModule, OverlayComponent, TranslatePipe],
+  imports: [CommonModule, OverlayComponent, ScrollAnimateDirective, TranslatePipe],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss',
 })

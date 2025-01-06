@@ -1,70 +1,77 @@
-@import '../../../styles.scss';
+@import "../../../styles.scss";
 
 :host {
-    background: radial-gradient(circle at 0% 50%, $background-color-secondary -10%, $background-color-primary 10%);
-    @include dFlex($fd: column, $g: 64px);
-    width: 100vw;
-    overflow: hidden;
+  background: radial-gradient(
+    circle at 0% 50%,
+    $background-color-secondary -10%,
+    $background-color-primary 10%
+  );
+  @include dFlex($fd: column, $g: 64px);
+  width: 100vw;
+  overflow: hidden;
 }
 
 h2 {
-    font-size: 64px;
-    color: $accent-color;
+  font-size: 64px;
+  color: $accent-color;
 }
 
 h3 {
-    font-size: 24px;
-    span{
-        color: $accent-color;
-    }
+  font-size: 24px;
+  span {
+    color: $accent-color;
+  }
 }
 
 .skills-wrapper {
-    @include dFlex($fd: column, $ai:flex-start, $g: 16px);
-    @include max-width;
-    @each $breakpoint, $padding in $padding-values {
-        @include respond-to($breakpoint) {
-          padding: $padding;
-        }
-      }
-    span:first-of-type {
-        color: $accent-color;
-        font-size: 24px;
-        font-weight: 500;
+  @include dFlex($fd: column, $ai: flex-start, $g: 16px);
+  @include max-width;
+  @each $breakpoint, $padding in $padding-values {
+    @include respond-to($breakpoint) {
+      padding: $padding;
     }
+  }
+  span:first-of-type {
+    color: $accent-color;
+    font-size: 24px;
+    font-weight: 500;
+    @include scroll-animation(left);
+  }
 }
 
 .skills-inner-wrapper {
-    @include dFlex($fd: column, $ai: flex-start, $g: 64px);
-    @include respond-to('xl') {
-        flex-direction: row;
-        gap: 128px;
-    }
+  @include dFlex($fd: column, $ai: flex-start, $g: 64px);
+  @include respond-to("xl") {
+    flex-direction: row;
+    gap: 128px;
+  }
 }
 
 .skill-set-text {
-    @include dFlex($fd: column, $ai: flex-start, $g: 16px);
-    backdrop-filter: blur(10px);
-    background-color: rgba(255, 255, 255, 0.05);
-    padding: 32px;
-    border-radius: 30px;
-    border: 1px solid white;
+  @include dFlex($fd: column, $ai: flex-start, $g: 16px);
+  @include scroll-animation(left);
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 32px;
+  border-radius: 30px;
+  border: 1px solid white;
 }
 
 .tech-icons {
-    @include dFlex($jc: flex-start, $g: 32px);
-    flex-wrap: wrap;
+  @include dFlex($jc: flex-start, $g: 32px);
+  flex-wrap: wrap;
+  @include scroll-animation(right);
 }
 
 .tech-icon {
-    @include dFlex($fd: column, $g: 8px);
-    width: 128px;
-    font-family: 'fira-Code';
-    img {
-        height: 56px;
-        transition: transform 500ms ease;
-        &:hover {
-            transform: scale(1.1);
-        }
+  @include dFlex($fd: column, $g: 8px);
+  width: 128px;
+  font-family: "fira-Code";
+  img {
+    height: 56px;
+    transition: transform 500ms ease;
+    &:hover {
+      transform: scale(1.1);
     }
+  }
 }

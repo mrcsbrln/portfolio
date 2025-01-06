@@ -5,7 +5,7 @@ import { Directive, ElementRef, EventEmitter, Input, Output, AfterViewInit } fro
   standalone: true,
 })
 export class ScrollAnimateDirective implements AfterViewInit {
-  @Input() animationClass = 'animate';
+  @Input() animationClass = 'animate-on-scroll';
   @Output() isVisible = new EventEmitter<boolean>();
 
   constructor(private el: ElementRef) {}

@@ -35,6 +35,7 @@ li {
   align-items: stretch;
   height: 109px;
   cursor: pointer;
+  @include scroll-animation(bottom);
   &:hover {
     img,
     .left img {

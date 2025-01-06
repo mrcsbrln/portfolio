@@ -1,7 +1,13 @@
 <div class="skills-wrapper">
-  <span>{{ "skills.subtitle" | translate }}</span>
+  <span appScrollAnimate [animationClass]="'animate-on-scroll'">{{
+    "skills.subtitle" | translate
+  }}</span>
   <div class="skills-inner-wrapper">
-    <div class="skill-set-text">
+    <div
+      class="skill-set-text"
+      appScrollAnimate
+      [animationClass]="'animate-on-scroll'"
+    >
       <h2>Skill set</h2>
       <p>{{ "skills.subtitle" | translate }}</p>
       <p>{{ "skills.text" | translate }}</p>
@@ -15,7 +21,11 @@
         targetId="contact"
       />
     </div>
-    <div class="tech-icons">
+    <div
+      class="tech-icons"
+      appScrollAnimate
+      [animationClass]="'animate-on-scroll'"
+    >
       <div class="tech-icon"><img src="/img/html.svg" /><span>HTML</span></div>
       <div class="tech-icon">
         <img src="/img/css.svg" alt="" /><span>CSS</span>

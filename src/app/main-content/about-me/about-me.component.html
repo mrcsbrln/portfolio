@@ -1,8 +1,16 @@
 <div class="wrapper">
-  <div class="portrait-div" appScrollAnimate [animationClass]="'animate'">
-    <img class="portrait" src="/img/mh.jpg" alt="Portrait">
+  <div
+    class="portrait-div"
+    appScrollAnimate
+    [animationClass]="'animate-on-scroll'"
+  >
+    <img class="portrait" src="/img/mh.jpg" alt="Portrait" />
   </div>
-  <div class="about-me-wrapper" appScrollAnimate [animationClass]="'animate'"npm>
+  <div
+    class="about-me-wrapper"
+    appScrollAnimate
+    [animationClass]="'animate-on-scroll'"
+  >
     <span>{{ "aboutMe.subtitle" | translate }}</span>
     <div class="about-me">
       <h2>{{ "aboutMe.title" | translate }}</h2>
