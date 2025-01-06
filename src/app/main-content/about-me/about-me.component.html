@@ -1,8 +1,8 @@
 <div class="wrapper">
-  <div class="portrait-div" #portraitDiv [class.animate]="isPortraitVisible">
+  <div class="portrait-div" appScrollAnimate [animationClass]="'animate'">
     <img class="portrait" src="/img/mh.jpg" alt="Portrait">
   </div>
-  <div class="about-me-wrapper" #aboutMeWrapper [class.animate]="isAboutMeVisible">
+  <div class="about-me-wrapper" appScrollAnimate [animationClass]="'animate'"npm>
     <span>{{ "aboutMe.subtitle" | translate }}</span>
     <div class="about-me">
       <h2>{{ "aboutMe.title" | translate }}</h2>
