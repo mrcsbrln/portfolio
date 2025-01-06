@@ -16,6 +16,9 @@
     padding: 16px 0;
     font-size: 32px;
   }
+  @include respond-to("xxl") {
+    bottom: 100px;
+  }
   @include respond-to-landscape {
     bottom: -43vh;
     padding: 12px 0;

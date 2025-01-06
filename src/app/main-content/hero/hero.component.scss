@@ -75,6 +75,9 @@ span {
   @include respond-to("xxl") {
     left: 256px;
   }
+  @include respond-to("xxxl") {
+    left: 448px;
+  }
 }
 
 .right-seperator-div {
@@ -96,6 +99,9 @@ span {
   }
   @include respond-to("xxl") {
     right: 256px;
+  }
+  @include respond-to("xxxl") {
+    right: 448px;
   }
   .vertical-seperator {
     height: 15vh;
