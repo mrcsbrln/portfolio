@@ -98,9 +98,12 @@ h3 {
 }
 
 .tech-icons {
-  @include dFlex($jc: flex-start, $g: 32px);
+  @include dFlex($g: 32px);
   flex-wrap: wrap;
   @include scroll-animation(right);
+  @include respond-to('md') {
+    justify-content: flex-start;
+  }
 }
 
 .tech-icon {
