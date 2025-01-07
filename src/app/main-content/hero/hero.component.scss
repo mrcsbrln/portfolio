@@ -61,14 +61,24 @@ span {
 .left-seperator-div {
   position: absolute;
   bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
+  margin-left: 0;
   overflow: hidden;
+  @include dFlex($fd: column, $g: 16px);
   @include respond-to-landscape {
     bottom: -50vh;
   }
-  @include dFlex($fd: column, $g: 16px);
+  @include respond-to("xs") {
+    left: 16px;
+  }
+  @include respond-to("sm") {
+    left: 32px;
+  }
+  @include respond-to("md") {
+    left: 64px;
+  }
   @include respond-to("xxl") {
+    left: 50%;
     margin-left: -624px;
   }
   @include respond-to("xxxl") {
@@ -79,16 +89,24 @@ span {
 .right-seperator-div {
   position: absolute;
   bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 0;
+  margin-left: 0;
+  width: 30px;
+  @include dFlex($fd: column, $g: 16px);
   @include respond-to-landscape {
     bottom: -50vh;
   }
-  @include dFlex($fd: column, $g: 16px);
+  @include respond-to("xs") {
+    right: 16px;
+  }
   @include respond-to("sm") {
     right: 32px;
   }
   @include respond-to("md") {
+    right: 64px;
+  }
+  @include respond-to("xxl") {
+    left: 50%;
     margin-left: 624px;
   }
   @include respond-to("xxxl") {
