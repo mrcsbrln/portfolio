@@ -61,7 +61,7 @@
     "namePlaceholder": "Ihr Name kommt hier hin",
     "nameError": "Hoppla! Es scheint, dass Ihr Name fehlt.",
     "emailLabel": "Wie lautet Ihre E-Mail?",
-    "emailPlaceholder": "ihreemail@email.com",
+    "emailPlaceholder": "email@email.com",
     "emailError": "Hoppla! Ihre E-Mail-Adresse wird benötigt.",
     "emailInvalid": "Bitte geben Sie gültige Email ein.",
     "messageLabel": "Wie kann ich Ihnen helfen?",

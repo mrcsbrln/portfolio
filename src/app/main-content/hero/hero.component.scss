@@ -13,7 +13,7 @@
     $background-color-secondary 100%
   );
   color: $text-color-primary;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 h1 {
@@ -61,48 +61,38 @@ span {
 .left-seperator-div {
   position: absolute;
   bottom: 0;
-  left: 32px;
+  left: 50%;
+  transform: translateX(-50%);
   overflow: hidden;
   @include respond-to-landscape {
     bottom: -50vh;
   }
   @include dFlex($fd: column, $g: 16px);
-  @include respond-to("sm") {
-    left: 64px;
-  }
-  @include respond-to("md") {
-    left: 128px;
-  }
   @include respond-to("xxl") {
-    left: 256px;
+    margin-left: -624px;
   }
   @include respond-to("xxxl") {
-    left: 448px;
+    margin-left: -720px;
   }
 }
 
 .right-seperator-div {
   position: absolute;
   bottom: 0;
-  right: 32px;
+  left: 50%;
+  transform: translateX(-50%);
   @include respond-to-landscape {
     bottom: -50vh;
   }
   @include dFlex($fd: column, $g: 16px);
   @include respond-to("sm") {
-    right: 64px;
+    right: 32px;
   }
   @include respond-to("md") {
-    right: 128px;
-  }
-    @include respond-to("md") {
-    right: 128px;
-  }
-  @include respond-to("xxl") {
-    right: 256px;
+    margin-left: 624px;
   }
   @include respond-to("xxxl") {
-    right: 448px;
+    margin-left: 720px;
   }
   .vertical-seperator {
     height: 15vh;
