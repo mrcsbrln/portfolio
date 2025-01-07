@@ -7,7 +7,6 @@
     $background-color-primary 10%
   );
   @include dFlex($fd: column, $g: 64px);
-  width: 100vw;
 }
 
 h2 {

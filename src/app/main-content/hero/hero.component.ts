@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { NavbarComponent } from '../../shared/navbar/navbar.component';
 import { ButtonComponent } from '../../shared/button/button.component';
 import { MarqueeComponent } from '../../shared/marquee/marquee.component';

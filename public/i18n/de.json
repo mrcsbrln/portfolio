@@ -77,6 +77,11 @@
     "title": "Impressum",
     "contact": "Kontakt"
   },
+  "footer": {
+    "imprint": "Impressum",
+    "frontend-developer": "Frontend Entwickler",
+    "location": "Berlin"
+  },
   "privacyPolicy": {
     "title": "Datenschutzerklärung",
     "section1": {

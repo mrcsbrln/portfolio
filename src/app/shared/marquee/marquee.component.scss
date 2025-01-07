@@ -1,37 +1,31 @@
 @import "../../../styles.scss";
 
 :host {
-  width: 100%;
+  position: relative;
+  bottom: 5vh;
   backdrop-filter: blur(10px);
   background-color: rgba(255, 255, 255, 0.05);
-  position: absolute;
-  bottom: 25px;
   padding: 12px 0;
   font-size: 24px;
   font-weight: 400;
   transform: rotate(-3deg);
-  overflow: hidden;
+  width: 100vw;
   @include respond-to("sm") {
-    bottom: 50px;
     padding: 16px 0;
     font-size: 32px;
   }
   @include respond-to("xxl") {
-    bottom: 100px;
   }
   @include respond-to-landscape {
-    bottom: -43vh;
     padding: 12px 0;
     font-size: 24px;
   }
 }
 
 div {
-  display: inline-block;
   animation: scroll-text 20s infinite linear;
   white-space: nowrap;
   span {
-    display: inline-block;
     margin: 0 32px;
   }
 }
