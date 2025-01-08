@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, EventEmitter, inject, Output, signal } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { ContactData } from '../../../interfaces/contactData.interface';
 import { HttpClient } from '@angular/common/http';
@@ -16,9 +16,9 @@ export class ContactFormComponent {
   private http = inject(HttpClient);
 
   privacyPolicyChecked = false;
-  formSubmitted = false;
-  emailSent = false;
-  
+  formSubmitted = signal(false);
+  emailFocused = signal(false);
+
   contactData: ContactData = {
     name: '',
     email: '',
@@ -37,12 +37,13 @@ export class ContactFormComponent {
   };
 
   onSubmit(ngForm: NgForm) {
-    this.formSubmitted = true;
     if (ngForm.submitted && ngForm.form.valid) {
-      this.http.post(this.post.endPoint, this.post.body(this.contactData))
+      this.formSubmitted.set(true);
+      document.body.classList.add('no-scroll');
+      this.http
+        .post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-            this.emailSent = true;
             ngForm.resetForm();
           },
           error: (error) => {
@@ -50,6 +51,15 @@ export class ContactFormComponent {
           },
           complete: () => console.info('send post complete'),
         });
-    } 
+    }
+    setTimeout(() => {
+      this.formSubmitted.set(false);
+      document.body.classList.remove('no-scroll');
+    }, 3000);
+  }
+
+  closeDialog() {
+    this.formSubmitted.set(false);
+    document.body.classList.remove('no-scroll');
   }
 }

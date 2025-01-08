@@ -7,8 +7,9 @@ import { TranslatePipe } from '@ngx-translate/core';
   standalone: true,
   imports: [ContactFormComponent, TranslatePipe],
   templateUrl: './contact.component.html',
-  styleUrl: './contact.component.scss'
+  styleUrl: './contact.component.scss',
 })
 export class ContactComponent {
+
 
 }
