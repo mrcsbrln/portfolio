@@ -114,7 +114,6 @@ h3 {
 }
 
 .tech-icon {
-  position: relative;
   @include dFlex($fd: column, $g: 8px);
   width: 128px;
   font-family: "fira-Code";
