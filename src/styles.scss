@@ -114,6 +114,21 @@ $padding-values: (
   margin-right: auto;
 }
 
+::-webkit-scrollbar {
+  width: 0.5em;
+  height: 0.5em;
+  background: transparent;
+}
+
+::-webkit-scrollbar-track {
+  background: $background-color-primary;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $accent-color;
+  border-radius: 100vw;
+}
+
 * {
   margin: 0;
   padding: 0;
