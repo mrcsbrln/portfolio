@@ -3,7 +3,6 @@
 :host {
   background-color: $background-color-primary;
   @include dFlex($jc: flex-start);
-  overflow-x: hidden;
 }
 
 h2 {
