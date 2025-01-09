@@ -53,6 +53,8 @@ h2 {
 }
 
 .cancel {
+  position: absolute;
+  top: 8px;
   @include dFlex();
   width: 24px;
   height: 50px;
@@ -64,6 +66,7 @@ h2 {
 .cancel-wrapper {
   @include dFlex($jc: flex-end);
   width: 100%;
+  position: relative;
 }
 
 .main-div {
@@ -85,7 +88,7 @@ h2 {
   );
   padding: 16px;
   z-index: 1000;
-  @include dFlex($fd: column, $jc: flex-start, $g: 16px);
+  @include dFlex($fd: column, $jc: flex-start);
   width: 90%;
   max-width: 1440px;
   max-height: 90%;
@@ -98,7 +101,7 @@ h2 {
     padding: 64px;
   }
   button {
-    margin-bottom: 16px;
+    margin: 16px 0;
     background: none;
     border: none;
     color: $accent-color;
@@ -121,7 +124,7 @@ h2 {
 }
 
 .project-info {
-  @include dFlex($fd: column, $ai: space-between, $g: 8px);
+  @include dFlex($fd: column, $ai: space-between, $g: 16px);
   width: 100%;
   @include respond-to("lg") {
     gap: 16px;
@@ -145,9 +148,10 @@ h2 {
 }
 
 .project-img {
-  @include dFlex($jc: flex-start);
   width: 100%;
+  display: none;
   @include respond-to("lg") {
+    @include dFlex($jc: flex-start);
     width: 50%;
   }
   img {
@@ -167,9 +171,6 @@ h2 {
   @include dFlex($jc: flex-start, $g: 16px);
   flex-wrap: wrap;
   padding: 8px 0;
-  @include respond-to('lg') {
-    gap: 32px;
-  }
 }
 
 .stack-icon {
