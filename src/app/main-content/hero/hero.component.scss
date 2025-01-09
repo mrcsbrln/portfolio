@@ -141,6 +141,12 @@ a img {
   @include transition-all;
 }
 
+.marquee-div {
+  width: 100vw;
+  height: 20vh;
+  @include dFlex();
+}
+
 .scroll-down {
   width: 30px;
   height: 48px;
