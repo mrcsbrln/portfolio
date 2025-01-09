@@ -1,8 +1,8 @@
 @import "../../../styles.scss";
 
 :host {
-  background-color: $background-color-primary;
   width: 100%;
+  background-color: $background-color-primary;
 }
 
 .left-div {
@@ -45,7 +45,6 @@
 .wrapper {
   @include dFlex($jc: space-between);
   @include max-width;
-  width: 100%;
     padding: 32px 16px;
     @include respond-to('sm') {
         padding: 32px;

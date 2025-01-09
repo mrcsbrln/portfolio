@@ -1,9 +1,15 @@
 <div class="title">
-  <span>{{ 'hero.subtitle' | translate }}</span>
+  <span>{{ "hero.subtitle" | translate }}</span>
   <h1>Marcus Hartmann</h1>
   <div class="buttons-div">
-    <app-button label="{{ 'heroBtn.projects' | translate }}" targetId="projects" />
-    <app-button label="{{ 'heroBtn.contact' | translate }}" targetId="contact" />
+    <app-button
+      label="{{ 'heroBtn.projects' | translate }}"
+      targetId="projects"
+    />
+    <app-button
+      label="{{ 'heroBtn.contact' | translate }}"
+      targetId="contact"
+    />
   </div>
 </div>
 <div class="left-seperator-div">
@@ -46,6 +52,4 @@
 
   <div class="vertical-seperator"></div>
 </div>
-<div class="marquee-div">
-  <app-marquee />
-</div>
+<app-marquee />
