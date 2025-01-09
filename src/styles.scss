@@ -131,7 +131,7 @@ $padding-values: (
 
 @supports (scrollbar-color: red blue) {
   * {
-    scrollbar-color: $background-color-primary $accent-color;
+    scrollbar-color: $accent-color $background-color-primary;
     scrollbar-width: thin;
   }
 }
