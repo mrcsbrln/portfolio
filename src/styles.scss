@@ -129,6 +129,13 @@ $padding-values: (
   border-radius: 100vw;
 }
 
+@supports (scrollbar-color: red blue) {
+  * {
+    scrollbar-color: $background-color-primary $accent-color;
+    scrollbar-width: thin;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
