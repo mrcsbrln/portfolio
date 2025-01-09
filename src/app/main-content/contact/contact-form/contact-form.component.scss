@@ -12,7 +12,7 @@ form {
 }
 
 .border-bottom {
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid $accent-color;
 }
 
 .checkbox {
@@ -59,7 +59,7 @@ form {
   @include dFlex($fd: column, $ai: flex-start, $g: 16px);
   width: 100%;
   padding: 24px 16px;
-  border-top: 1px solid white;
+  border-top: 1px solid $accent-color;
   @include transition-all;
   &:hover input::placeholder,
   &:hover textarea::placeholder {
