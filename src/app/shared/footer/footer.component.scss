@@ -19,7 +19,7 @@
     color: $accent-color;
     font-family: "Fira-Code";
     font-size: 18px;
-    @include respond-to("lg") {
+    @include respond-to("md") {
       display: inline;
     }
   }
