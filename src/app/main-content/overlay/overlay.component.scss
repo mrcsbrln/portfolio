@@ -88,10 +88,10 @@ h2 {
   );
   padding: 16px;
   z-index: 1000;
-  @include dFlex($fd: column, $jc: flex-start);
+  @include dFlex($fd: column, $jc: space-between);
   width: 90%;
   max-width: 1440px;
-  max-height: 90%;
+  height: 90%;
   overflow-y: auto;
   @include respond-to("sm") {
     width: 90%;
