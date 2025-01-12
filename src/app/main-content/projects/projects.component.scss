@@ -3,6 +3,8 @@
 :host {
   background-color: $background-color-primary;
   @include dFlex($jc: flex-start);
+  position: relative;
+  z-index: 1;
 }
 
 h2 {
