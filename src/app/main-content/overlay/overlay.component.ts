@@ -1,12 +1,11 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Project } from '../../interfaces/project.interface';
-import { ButtonComponent } from '../../shared/button/button.component';
 import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-overlay',
   standalone: true,
-  imports: [ButtonComponent, TranslatePipe],
+  imports: [TranslatePipe],
   templateUrl: './overlay.component.html',
   styleUrl: './overlay.component.scss',
 })
@@ -17,11 +16,13 @@ export class OverlayComponent {
 
   currentIndex: number = 0;
   cancelIconPath = '/img/cancel.svg';
-  arrowRightIconPath = '/img/arrow-right.svg'
+  arrowRightIconPath = '/img/arrow-right.svg';
 
   ngOnChanges(): void {
     if (this.project) {
-      this.currentIndex = this.projects.findIndex((p) => p.id === this.project?.id);
+      this.currentIndex = this.projects.findIndex(
+        (p) => p.id === this.project?.id
+      );
     }
   }
 
@@ -40,8 +41,10 @@ export class OverlayComponent {
     if (!this.project || !this.project.stack) {
       return [];
     }
-  
-    return this.project.stack.map((tech) => `/img/${tech.toLowerCase()}-green.svg`);
+
+    return this.project.stack.map(
+      (tech) => `/img/${tech.toLowerCase()}-green.svg`
+    );
   }
 
   getStackName(i: number) {

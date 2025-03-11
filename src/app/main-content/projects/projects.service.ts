@@ -34,6 +34,15 @@ export class ProjectsService {
       gitHubUrl: '',
       projectUrl: 'https://dabubble.marcus-hartmann.net/',
     },
+    {
+      id: 4,
+      title: 'NgMovie',
+      stack: ['Angular', 'Typescript', 'Rest-Api'],
+      imageUrl: '/img/ngmovie.png',
+      description: '',
+      gitHubUrl: 'https://github.com/mrcsbrln/ng-movie',
+      projectUrl: 'https://ngmovie.marcus-hartmann.net/',
+    },
   ];
 
   getProjects(): Project[] {
