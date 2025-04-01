@@ -44,7 +44,8 @@
     "description": {
       "1": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
       "2": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
-      "3": "This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization."
+      "3": "Currently under development: This App is a Slack Clone for team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization.",
+      "4": "An Angular-based webpage that retrieves movie data via The Movie Database (TMDB) API."
     },
     "next": "Next project"
   },

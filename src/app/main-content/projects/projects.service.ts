@@ -37,7 +37,7 @@ export class ProjectsService {
     {
       id: 4,
       title: 'NgMovie',
-      stack: ['Angular', 'Typescript', 'Rest-Api'],
+      stack: ['Angular', 'Typescript', 'REST-API'],
       imageUrl: '/img/ngmovie.png',
       description: '',
       gitHubUrl: 'https://github.com/mrcsbrln/ng-movie',
