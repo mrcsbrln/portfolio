@@ -15,7 +15,6 @@ export class OverlayComponent {
   @Output() close = new EventEmitter<void>();
 
   currentIndex: number = 0;
-  cancelIconPath = '/img/cancel.svg';
   arrowRightIconPath = '/img/arrow-right.svg';
 
   ngOnChanges(): void {
@@ -56,17 +55,13 @@ export class OverlayComponent {
   }
 
   onMouseOver(icon: string): void {
-    if (icon === 'cancel-icon') {
-      this.cancelIconPath = '/img/cancel-hover.svg';
-    } else if (icon === 'arrow-right') {
+    if (icon === 'arrow-right') {
       this.arrowRightIconPath = '/img/arrow-right-hover.svg';
     }
   }
 
   onMouseLeave(icon: string): void {
-    if (icon === 'cancel-icon') {
-      this.cancelIconPath = '/img/cancel.svg';
-    } else if (icon === 'arrow-right') {
+    if (icon === 'arrow-right') {
       this.arrowRightIconPath = '/img/arrow-right.svg';
     }
   }

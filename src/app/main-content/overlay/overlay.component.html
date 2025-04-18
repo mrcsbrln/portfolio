@@ -2,9 +2,14 @@
   <div class="cancel-wrapper">
     <div class="cancel" (click)="emitCloseEvent()">
       <img
-        [src]="cancelIconPath"
-        (mouseover)="onMouseOver('cancel-icon')"
-        (mouseleave)="onMouseLeave('cancel-icon')"
+        class="cancel-icon cancel-icon-default"
+        src="/img/cancel.svg"
+        alt="Close"
+      />
+      <img
+        class="cancel-icon cancel-icon-hover"
+        src="/img/cancel-hover.svg"
+        alt="Close"
       />
     </div>
   </div>
@@ -12,8 +17,8 @@
     <div class="project-info">
       <span>{{ getFormattedId(project?.id || 0) }}</span>
       <h2>{{ project?.title }}</h2>
-      <span>{{ 'overlay.question' | translate}}</span>
-      <p>{{ 'overlay.description.' + project?.id | translate }}</p>
+      <span>{{ "overlay.question" | translate }}</span>
+      <p>{{ "overlay.description." + project?.id | translate }}</p>
       <div class="stack-icons">
         @for(stackIconPath of getStackIconPath(); track $index) {
         <div class="stack-icon">
@@ -46,6 +51,7 @@
     (mouseover)="onMouseOver('arrow-right')"
     (mouseleave)="onMouseLeave('arrow-right')"
   >
-    {{'overlay.next' | translate}} <img src="/img/arrow-right.svg" [src]="arrowRightIconPath" />
+    {{ "overlay.next" | translate }}
+    <img src="/img/arrow-right.svg" [src]="arrowRightIconPath" />
   </button>
 </div>

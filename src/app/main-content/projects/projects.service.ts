@@ -31,7 +31,7 @@ export class ProjectsService {
       stack: ['Angular', 'Typescript', 'Firebase'],
       imageUrl: '/img/da-bubble.png',
       description: '',
-      gitHubUrl: '',
+      gitHubUrl: 'https://github.com/DanieleDona1/DABubble',
       projectUrl: 'https://dabubble.marcus-hartmann.net/',
     },
     {
