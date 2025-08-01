@@ -1,6 +1,22 @@
-@import '../styles.scss';
+@import "../styles.scss";
 
 :host {
-    @include dFlex($fd: column);
-    min-height: 100vh;
+  @include dFlex($fd: column);
+  min-height: 100vh;
+}
+
+.cursor-glow {
+  position: fixed;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(0, 255, 230, 0.25) 0%,
+    rgba(0, 255, 230, 0) 60%
+  );
+  pointer-events: none;
+  z-index: 0;
+  transform: translate(-50%, -50%);
+  filter: blur(80px);
 }

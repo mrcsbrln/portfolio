@@ -1,7 +1,13 @@
-import { Component, effect, inject } from '@angular/core';
+import {
+  Component,
+  effect,
+  ElementRef,
+  HostListener,
+  inject,
+  ViewChild,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterLink, RouterOutlet } from '@angular/router';
-import { MainContentComponent } from './main-content/main-content.component';
+import { RouterOutlet } from '@angular/router';
 import { FooterComponent } from './shared/footer/footer.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { TranslateService } from '@ngx-translate/core';
@@ -11,18 +17,17 @@ import translationsDE from '../../public/i18n/de.json';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [
-    CommonModule,
-    RouterLink,
-    RouterOutlet,
-    MainContentComponent,
-    FooterComponent,
-    NavbarComponent,
-  ],
+  imports: [CommonModule, RouterOutlet, FooterComponent, NavbarComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
+  @ViewChild('glow') glowElement!: ElementRef<HTMLDivElement>;
+
+  ngAfterViewInit() {
+    // Initialisierung oder spätere Events
+  }
+
   private translate = inject(TranslateService);
   private languageToggleService = inject(LanguageToggleService);
 
@@ -37,4 +42,12 @@ export class AppComponent {
     this.translate.setTranslation('de', translationsDE);
   }
   title = 'portfolio';
+
+  @HostListener('document:mousemove', ['$event'])
+  onMouseMove(event: MouseEvent) {
+    const x = event.clientX;
+    const y = event.clientY;
+    this.glowElement.nativeElement.style.left = `${x}px`;
+    this.glowElement.nativeElement.style.top = `${y}px`;
+  }
 }
